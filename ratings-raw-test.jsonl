@@ -1,0 +1,5 @@
+{"_id":"rIUeBHa4Xy9E","_time":1783560914,"kind":"save","account":"twix","blind_id":"Opportunity 1","rating":9,"comment":"person A","rater":"Aishat","session":"sessAAA","ts":"2026-07-08T10:00:00Z"}
+{"_id":"DIEMVwNBIotj","_time":1783560914,"kind":"save","account":"twix","blind_id":"Opportunity 1","rating":4,"comment":"person B","rater":"Aishat","session":"sessBBB","ts":"2026-07-08T10:01:00Z"}
+{"_id":"pvAYJzyiTtFM","_time":1783560914,"kind":"save","account":"twix","blind_id":"Opportunity 1","rating":7,"comment":"person A revised","rater":"Aishat","session":"sessAAA","ts":"2026-07-08T10:05:00Z"}
+{"_id":"ubAm7swRb3sn","_time":1783560914,"kind":"save","account":"twix","blind_id":"Opportunity 2","rating":"abc","comment":"junk","rater":"troll","session":"sessX","ts":"2026-07-08T10:06:00Z"}
+{"_id":"0yDoBtGI9Q6z","_time":1783560915,"kind":"save","account":"twix","blind_id":"Opportunity 3","rating":9999,"comment":"junk2","rater":"troll","session":"sessX","ts":"2026-07-08T10:07:00Z"}
