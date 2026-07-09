@@ -1,0 +1,51 @@
+name: Archive ratings
+# Durability layer: ntfy.sh caches messages for ~12h. This job polls the shared
+# topic and appends any NEW rating messages (BLIND — no prompt_version) to
+# ratings-raw.jsonl in the repo, so nothing is lost past the cache window.
+# prompt_version is never added here; it is re-attached only by the LOCAL reader.
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # every 30 min (ntfy retains ~12h, so no loss)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-ratings
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Poll ntfy and append new messages
+        run: |
+          set -euo pipefail
+          TOPIC=$(node -e "console.log(require('./config.json').ntfyTopic)")
+          curl -s "https://ntfy.sh/$TOPIC/json?poll=1&since=all" > /tmp/poll.ndjson || true
+          touch ratings-raw.jsonl
+          node -e '
+            const fs=require("fs");
+            const seen=new Set(fs.readFileSync("ratings-raw.jsonl","utf8").split("\n").filter(Boolean).map(l=>{try{return JSON.parse(l)._id}catch{return null}}));
+            const lines=fs.readFileSync("/tmp/poll.ndjson","utf8").split("\n").filter(Boolean);
+            let added=0;
+            const out=fs.createWriteStream("ratings-raw.jsonl",{flags:"a"});
+            for(const l of lines){ let m; try{m=JSON.parse(l)}catch{continue}
+              if(m.event!=="message"||seen.has(m.id))continue;
+              let body; try{body=JSON.parse(m.message)}catch{body={raw:m.message}}
+              out.write(JSON.stringify({_id:m.id,_time:m.time,...body})+"\n"); seen.add(m.id); added++; }
+            out.end(); console.log("added",added,"rows");
+          '
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet ratings-raw.jsonl; then
+            git add ratings-raw.jsonl
+            git commit -m "archive: ratings snapshot $(date -u +%FT%TZ)"
+            git push
+          else
+            echo "no new ratings"
+          fi

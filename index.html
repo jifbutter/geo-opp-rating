@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rate GEO Opportunities</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --border:#e5e7eb; --text:#111827; --muted:#6b7280;
+    --accent:#111827; --accentText:#fff; --save:#2563eb; --ok:#059669; --done:#86efac;
+    --doneBg:#f2fdf7; --chip:#eef2ff; --chipText:#3730a3;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0b0d10; --card:#15181d; --border:#2a2f37; --text:#e8eaed; --muted:#9aa2ad;
+      --accent:#e8eaed; --accentText:#0b0d10; --save:#3b82f6; --ok:#34d399; --done:#2f6b4a;
+      --doneBg:#12211a; --chip:#1e2536; --chipText:#a5b4fc; }
+  }
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:800px;margin:0 auto;padding:22px 16px 80px}
+  h1{font-size:21px;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:16px;line-height:1.5}
+  .who{margin-bottom:14px}
+  .who label{font-size:13px;color:var(--muted);display:block;margin-bottom:4px}
+  .who input{padding:9px 11px;border:1px solid var(--border);border-radius:9px;font-size:15px;width:min(300px,100%);background:var(--card);color:var(--text)}
+  .toggle{display:inline-flex;background:var(--border);border-radius:11px;padding:4px;margin-bottom:6px;flex-wrap:wrap}
+  .toggle button{border:none;background:transparent;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;color:var(--muted)}
+  .toggle button.on{background:var(--accent);color:var(--accentText)}
+  .prog{position:sticky;top:0;background:var(--bg);padding:11px 2px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);z-index:5;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+  .bar{height:6px;background:var(--border);border-radius:99px;flex:1;min-width:120px;overflow:hidden}
+  .bar > i{display:block;height:100%;background:var(--ok);width:0;transition:width .2s}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:18px;margin:14px 0}
+  .card.done{border-color:var(--done);background:var(--doneBg)}
+  .oid{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .cat{font-size:10px;background:var(--chip);color:var(--chipText);padding:2px 7px;border-radius:6px;font-weight:600}
+  .t{font-size:17px;font-weight:650;margin:4px 0 5px;line-height:1.35}
+  .desc{color:var(--text);font-size:14px;margin:6px 0;line-height:1.5;opacity:.92}
+  .acts{margin:8px 0 4px;padding-left:18px} .acts > li{font-size:13.5px;margin-bottom:4px;font-weight:550}
+  .tasks{color:var(--muted);font-size:12.5px;padding-left:16px;margin:3px 0;font-weight:400}
+  .lbl{font-size:12px;color:var(--muted);margin:12px 0 6px;font-weight:600}
+  .rate{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 4px}
+  .rate button{width:38px;height:38px;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:9px;cursor:pointer;font-size:14px;font-weight:600}
+  .rate button.sel{background:var(--accent);color:var(--accentText);border-color:var(--accent)}
+  .rk{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);max-width:430px;margin-top:2px}
+  textarea{width:100%;border:1px solid var(--border);border-radius:9px;padding:10px;font-size:14px;min-height:56px;font-family:inherit;background:var(--card);color:var(--text);margin-top:6px}
+  .save{margin-top:12px;padding:9px 18px;border:none;background:var(--save);color:#fff;border-radius:9px;cursor:pointer;font-size:14px;font-weight:600}
+  .save.sec{background:transparent;color:var(--muted);border:1px solid var(--border)}
+  .ok{color:var(--ok);font-size:13px;margin-left:10px;font-weight:600}
+  .submit{width:100%;margin-top:8px;padding:15px;border:none;background:var(--ok);color:#fff;border-radius:11px;cursor:pointer;font-size:16px;font-weight:700}
+  .submit:disabled{opacity:.5;cursor:not-allowed}
+  .note{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+  .err{color:#dc2626;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Rate these opportunities</h1>
+  <div class="sub">Pick an account, then rate each opportunity <b>1 (poor) to 10 (excellent)</b> and leave a short comment on what is strong or weak. Each list mixes opportunities from different prompt versions in random order &mdash; you are intentionally <b>not</b> told which is which. Tap <b>Save</b> on each, then <b>Submit</b> when you finish an account.</div>
+
+  <div class="who">
+    <label for="rater">Your name (so we can attribute your ratings)</label>
+    <input id="rater" placeholder="e.g. Aishat" autocomplete="name" />
+  </div>
+
+  <div class="toggle" id="toggle"></div>
+  <div class="prog" id="prog"><span id="progText">Loading…</span><span class="bar"><i id="progBar"></i></span></div>
+  <div id="list"></div>
+  <button class="submit" id="submitBtn" onclick="submitSet()">Submit my ratings for this account</button>
+  <div class="note" id="note"></div>
+</div>
+
+<script>
+let CFG = null, ITEMS = [], ACCOUNTS = [];
+let active = null;
+const state = {};                 // key -> {rating, comment}
+const done = JSON.parse(localStorage.oppDone2026 || '{}');   // key -> true (saved)
+const submitted = JSON.parse(localStorage.oppSubmitted2026 || '{}'); // account -> ts
+let SESSION = localStorage.oppSession2026;
+if(!SESSION){ SESSION = Date.now().toString(36)+Math.random().toString(36).slice(2,8); localStorage.oppSession2026 = SESSION; }
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const key=it=>it.account+'::'+it.blind_id;
+
+async function boot(){
+  try{
+    const [cfg, items] = await Promise.all([
+      fetch('./config.json').then(r=>r.json()),
+      fetch('./opps-blind.json').then(r=>r.json()),
+    ]);
+    CFG=cfg; ITEMS=items; ACCOUNTS=cfg.accounts;
+    active = localStorage.oppActive2026 || ACCOUNTS[0].key;
+    $('rater').value = localStorage.oppRater2026 || '';
+    $('rater').addEventListener('input', e=>localStorage.oppRater2026=e.target.value);
+    render();
+  }catch(e){ $('progText').innerHTML='<span class="err">Failed to load opportunities: '+esc(e.message)+'</span>'; }
+}
+
+function setActive(k){ active=k; localStorage.oppActive2026=k; render(); window.scrollTo({top:0}); }
+function pick(k,v){ state[k]=state[k]||{}; state[k].rating=v; const el=$('rate-'+k); if(el) [...el.children].forEach((b,i)=>b.classList.toggle('sel',i+1===v)); }
+
+function render(){
+  $('toggle').innerHTML = ACCOUNTS.map(a=>'<button class="'+(active===a.key?'on':'')+'" onclick="setActive(\''+a.key+'\')">'+esc(a.name)+'</button>').join('');
+  const mine = ITEMS.filter(it=>it.account===active);
+  const list=$('list'); list.innerHTML=''; let n=0;
+  for(const it of mine){
+    const k=key(it); const isDone=!!done[k]; if(isDone)n++;
+    const st=state[k]||{};
+    const acts=it.actions.map(a=>'<li>'+esc(a.title)+(a.tasks&&a.tasks.length?'<ul class="tasks">'+a.tasks.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul>':'')+'</li>').join('');
+    const btns=Array.from({length:10},(_,i)=>i+1).map(v=>'<button class="'+(st.rating===v?'sel':'')+'" onclick="pick(\''+k+'\','+v+')">'+v+'</button>').join('');
+    const div=document.createElement('div');
+    div.className='card'+(isDone?' done':'');
+    div.innerHTML=
+      '<div class="oid"><b>'+esc(it.blind_id)+'</b> <span class="cat">'+esc(it.category)+'</span></div>'+
+      '<div class="t">'+esc(it.title)+'</div>'+
+      '<div class="desc">'+esc(it.description)+'</div>'+
+      (acts?'<div class="lbl">Suggested actions</div><ul class="acts">'+acts+'</ul>':'')+
+      '<div class="lbl">Your rating (1&ndash;10)</div>'+
+      '<div class="rate" id="rate-'+k+'">'+btns+'</div>'+
+      '<div class="rk"><span>1 &middot; poor</span><span>10 &middot; excellent</span></div>'+
+      '<textarea id="c-'+k+'" placeholder="What is good or weak about this opportunity?">'+esc(st.comment||'')+'</textarea>'+
+      '<div><button class="save'+(isDone?' sec':'')+'" onclick="save(\''+it.account+'\',\''+it.blind_id+'\')">'+(isDone?'Update':'Save')+'</button><span class="ok" id="ok-'+k+'">'+(isDone?'saved ✓':'')+'</span></div>';
+    list.appendChild(div);
+  }
+  const nm=ACCOUNTS.find(a=>a.key===active).name;
+  $('progText').textContent = nm+': '+n+' / '+mine.length+' rated'+(submitted[active]?'  ·  submitted ✓':'');
+  $('progBar').style.width = (mine.length? (n/mine.length*100):0)+'%';
+  const btn=$('submitBtn'); btn.textContent = submitted[active]? 'Re-submit '+nm+' ratings' : 'Submit my ratings for '+nm;
+  $('note').textContent='';
+}
+
+async function postRating(payload){
+  const res = await fetch('https://ntfy.sh/'+CFG.ntfyTopic, {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(payload),
+  });
+  if(!res.ok) throw new Error('HTTP '+res.status);
+}
+
+async function save(account, blind_id){
+  const k=account+'::'+blind_id;
+  const rater=$('rater').value.trim();
+  if(!rater){ alert('Please enter your name at the top first.'); $('rater').focus(); return; }
+  const rating=(state[k]||{}).rating;
+  const comment=$('c-'+k).value.trim();
+  if(!rating){ alert('Pick a 1–10 rating first.'); return; }
+  state[k]=state[k]||{}; state[k].comment=comment;
+  $('ok-'+k).textContent='saving…';
+  try{
+    await postRating({kind:'save', account, blind_id, rating, comment, rater, session:SESSION, ts:new Date().toISOString()});
+    done[k]=true; localStorage.oppDone2026=JSON.stringify(done);
+    render();
+  }catch(e){ $('ok-'+k).innerHTML='<span class="err">save failed &mdash; retry</span>'; }
+}
+
+async function submitSet(){
+  const rater=$('rater').value.trim();
+  if(!rater){ alert('Please enter your name at the top first.'); $('rater').focus(); return; }
+  const mine = ITEMS.filter(it=>it.account===active);
+  const rated = mine.filter(it=>done[key(it)]).length;
+  if(rated < mine.length && !confirm('You have rated '+rated+' of '+mine.length+' opportunities for this account. Submit anyway?')) return;
+  const btn=$('submitBtn'); btn.disabled=true; btn.textContent='Submitting…';
+  try{
+    await postRating({kind:'submit', account:active, rater, session:SESSION, rated, total:mine.length, ts:new Date().toISOString()});
+    submitted[active]=Date.now(); localStorage.oppSubmitted2026=JSON.stringify(submitted);
+    render();
+    $('note').innerHTML='✓ Thanks! Your '+esc(ACCOUNTS.find(a=>a.key===active).name)+' ratings are recorded. You can switch accounts above.';
+  }catch(e){ $('note').innerHTML='<span class="err">Submit failed &mdash; please try again.</span>'; }
+  finally{ btn.disabled=false; }
+}
+
+boot();
+</script>
+</body>
+</html>

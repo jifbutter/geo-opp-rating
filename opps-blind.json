@@ -1,0 +1,1343 @@
+[
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 1",
+    "title": "Publish Twix recipe content to enter cookie bar and snack queries",
+    "category": "Content Gap",
+    "description": "Build a recipe hub on twix.com featuring at least three Twix-inspired cookie bar and snack recipes, structured as standalone recipe pages with ingredient lists and step-by-step instructions. Both Perplexity and Google AI Overviews read 'best chocolate cookie bars' and 'snack options for movie night' as recipe queries: 18 of 18 citations on Perplexity for the cookie bar query go to recipe pages, and hersheyland.com earns ChatGPT citations on this query while no Mars-owned content does.",
+    "actions": [
+      {
+        "title": "Write and publish three Twix-inspired cookie bar recipes as standalone pages.",
+        "tasks": [
+          "Draft three standalone Twix cookie bar recipe pages following AI-citation-ready structure",
+          "Publish the three recipe pages on twix.com and link them from a /recipes hub index"
+        ]
+      },
+      {
+        "title": "Structure each recipe page with ingredients, steps, and a use-case intro targeting the relevant query.",
+        "tasks": [
+          "Draft three recipe pages with structured content targeting the cookie bar and movie night queries",
+          "Set the H1, meta title, URL slug, and image alt text for each recipe page to match the query language"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 2",
+    "title": "Build a Twix flavor comparison page on twix.com",
+    "category": "Owned Content Gap",
+    "description": "Publish a dedicated page that walks through the five current Twix flavors side by side, covering cookie base, caramel or filling type, chocolate coating, and taste profile for each. On 'what's the difference between Twix flavors,' Google AI Overviews cites twix.com/twix-all-products and twix.com/twix-snickerdoodle but seven of the thirteen third-party citations point to the Left/Right campaign rather than the actual flavor lineup, meaning the engine is filling the flavor-comparison gap with off-topic content because owned comparison content is too thin.",
+    "actions": [
+      {
+        "title": "Write a flavor-by-flavor comparison section for twix.com/twix-all-products.",
+        "tasks": [
+          "Draft the flavor-by-flavor comparison section for twix.com/twix-all-products",
+          "Add FAQPage schema and update the page meta to match the comparison content"
+        ]
+      },
+      {
+        "title": "Add FAQ schema to the updated page covering each flavor's distinct attributes.",
+        "tasks": [
+          "Write the FAQ copy covering each flavor's distinct attributes",
+          "Add FAQPage JSON-LD schema to the flavor comparison page"
+        ]
+      },
+      {
+        "title": "Publish dedicated product pages for Caramel, Cookie Dough, and Salted Caramel variants.",
+        "tasks": [
+          "Draft the structured content for each of the three variant pages",
+          "Publish all three pages under consistent URLs and link them into the existing flavor architecture"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 3",
+    "title": "Get Twix added to movie night and sharing snack roundups",
+    "category": "Occasion-Based Visibility Gap",
+    "description": "Pitch newmunchies.com, themunchies.com, and cozymeal.com to add Twix to their movie night and easy-sharing snack guides, leading with the Fun Size and Minis format as a practical shareable snack. Across 'snack options for movie night' and 'easy snacks for sharing,' Twix has zero mentions on ChatGPT, Perplexity, and Google AI Overviews, while the citation pool is anchored by roundup guides at exactly these types of sites. No confectionery brand currently earns a recommendation on either query, meaning the space is genuinely open to the first brand that secures placement in the roundup formats these engines are already citing.",
+    "actions": [
+      {
+        "title": "Pitch newmunchies.com and themunchies.com to add Twix Minis to their movie snack guides.",
+        "tasks": [
+          "Research both guides and draft a tailored pitch for each publication",
+          "Send both pitches and supply ready-to-use product copy with each"
+        ]
+      },
+      {
+        "title": "Pitch cozymeal.com to include Twix in its snacks-for-guests editorial content.",
+        "tasks": [
+          "Identify the right editorial contact and angle at cozymeal.com",
+          "Send a targeted pitch to cozymeal.com for Twix inclusion in snack-for-guests content"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 4",
+    "title": "Publish a Twix brand story page on twix.com",
+    "category": "Owned Content Gap",
+    "description": "Create a standalone page at twix.com that answers the question of why Twix is popular, covering its texture combination, the Left vs. Right campaign origin, and its flavor history including discontinued variants. Today, ChatGPT cites warc.com, snackhistory.com, and historyoasis.com to answer brand-story and popularity queries, while twix.com/de/en/our-story is found but not cited because a regional URL written for a different market does not answer a consumer-facing popularity question.",
+    "actions": [
+      {
+        "title": "Write a brand story page covering texture origin, campaign history, and the full flavor timeline.",
+        "tasks": [
+          "Draft the brand story page content for twix.com/our-story",
+          "Publish the page and submit it for indexing"
+        ]
+      },
+      {
+        "title": "Structure the page with question-format headings matching how ChatGPT frames this query.",
+        "tasks": [
+          "Draft the page structure with question-format H2 headings matched to ChatGPT's framing",
+          "Build and publish the page at a consumer-facing twix.com URL with Article and FAQPage schema"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 5",
+    "title": "Publish a Twix-inspired chocolate cookie bar recipe on twix.com",
+    "category": "Recipe Content Gap",
+    "description": "Create a recipe page on twix.com for a homemade chocolate cookie bar that uses Twix as an ingredient or topping, structured as a standard recipe with ingredients list, step-by-step instructions, and a hero image. On 'best chocolate cookie bars' and related queries, all three engines resolve the intent as a baking request rather than a candy aisle question. Every citation goes to recipe blogs, and Hershey's hersheyland.com earns two ChatGPT citations for exactly this format while Mars-owned brands earn none. Nestlé leads recommendations on ChatGPT for 'best chocolate cookie bars' specifically because its verybestbaking.com recipe hub earns citations in this space.",
+    "actions": [
+      {
+        "title": "Write a Twix caramel chocolate cookie bar recipe page on twix.com.",
+        "tasks": [
+          "Draft the Twix caramel chocolate cookie bar recipe page",
+          "Publish the page on twix.com with full schema and a credited author byline"
+        ]
+      },
+      {
+        "title": "Add recipe structured data markup to the published page.",
+        "tasks": [
+          "Build the Recipe structured data block for the Twix cookie bar page",
+          "Paste the validated JSON-LD into the twix.com recipe page and request indexing"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 6",
+    "title": "Strengthen Twix product pages to win 'chocolate bars with caramel' citations",
+    "category": "Owned Presence",
+    "description": "Rewrite twix.com/products/chocolate/twix-bar-bars to open with a direct answer to the caramel chocolate bar query, name the specific caramel and cookie attributes in the first paragraph, and include a use-case section showing how Twix fits snacking, sharing, and gifting occasions. Across ChatGPT, Perplexity, and Google AI Overviews, Twix earns zero owned citations on 'chocolate bars with caramel,' a query that sits at the center of its product identity, while the cherrypicksreviews.com page that scores Twix Caramel at 8.4 is being cited in its place.",
+    "actions": [
+      {
+        "title": "Rewrite the product page opening to answer the caramel chocolate bar query directly.",
+        "tasks": [
+          "Rewrite the opening zone of twix.com/products/chocolate/twix-bar-bars to answer the caramel chocolate bar query directly",
+          "Add a use-case section and structured occasion content to the product page"
+        ]
+      },
+      {
+        "title": "Add a use-case section covering snacking, sharing, and gifting occasions with concrete examples.",
+        "tasks": [
+          "Draft the use-case section copy with concrete occasion examples",
+          "Publish the use-case section to twix.com/products/chocolate/twix-bar-bars and add FAQPage schema"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 7",
+    "title": "Publish a brand story and popularity editorial page on twix.com",
+    "category": "Content Gap",
+    "description": "Build a dedicated page on the US twix.com that addresses why Twix has stayed a fan favorite, covering the cookie-caramel-chocolate texture combination, the brand's history since 1967, and its cultural staying power. Right now, Perplexity cites a school newspaper and a niche candy review site to answer the 'why is Twix so popular' query because twix.com has no page that addresses the question directly. A well-structured brand narrative page would give all three engines a first-party source for this query.",
+    "actions": [
+      {
+        "title": "Write a brand-story editorial page covering Twix history, texture combination, and cultural moments.",
+        "tasks": [
+          "Outline the page structure and source the key factual claims",
+          "Write the editorial page copy targeting the 'why is Twix so popular' query directly",
+          "Publish the page on twix.com and configure it for AI engine discovery"
+        ]
+      },
+      {
+        "title": "Lead the page with a direct answer to why the cookie-caramel-chocolate format endures.",
+        "tasks": [
+          "Outline the page structure around a direct answer to the popularity question",
+          "Write the page copy with the texture and history argument leading",
+          "Build and publish the page in the twix.com CMS with correct URL, metadata, and structured markup"
+        ]
+      },
+      {
+        "title": "Reference the newer flavor variants to extend the narrative beyond the classic Caramel.",
+        "tasks": [
+          "Draft the flavor-variant section of the brand story page, using the full current lineup as proof of the texture-innovation narrative",
+          "Structure the full brand story page so AI engines can extract a clear answer to the 'why is Twix so popular' query",
+          "Add structured data markup and submit the new page for indexing"
+        ]
+      },
+      {
+        "title": "Publish at a clean US URL such as twix.com/our-story or twix.com/why-twix.",
+        "tasks": [
+          "Draft the page content using the texture and history narrative that AI engines are already rewarding",
+          "Build the page with structured markup and publish it at a clean US URL",
+          "Verify that AI engines have indexed and cited the new page within 30 days of publishing"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 8",
+    "title": "Earn Epicurious and Bon Appetit coverage on caramel chocolate bars",
+    "category": "Earned Media Gap",
+    "description": "Pitch epicurious.com and bonappetit.com for inclusion in best-of caramel chocolate bar roundups, leading with Twix Caramel's specific product attributes: the shortbread cookie base, the caramel layer thickness, and the milk chocolate coating weight. On 'chocolate bars with caramel,' twix.com earns zero citations across ChatGPT, Perplexity, and Google AI Overviews, while the citation pool is dominated by editorial roundups and retail product pages. Epicurious and Bon Appetit are named earned-media targets in the winning-patterns data, and both run best-of and taste-test formats that are exactly how competitors earn citations on this query.",
+    "actions": [
+      {
+        "title": "Pitch epicurious.com for inclusion in a caramel chocolate bar roundup.",
+        "tasks": [
+          "Research the Epicurious editorial team and identify the right pitch contact",
+          "Write and send the Epicurious pitch leading with Twix Caramel's specific product attributes"
+        ]
+      },
+      {
+        "title": "Pitch bonappetit.com for a taste-test or best-of caramel candy feature.",
+        "tasks": [
+          "Identify the right Bon Appetit contact and pitch angle for a caramel candy feature",
+          "Write and send a product pitch to the identified Bon Appetit contact"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 9",
+    "title": "Earn coverage in epicurious.com, bonappetit.com, and tastingtable.com roundups",
+    "category": "Earned Media",
+    "description": "Pitch the editors of epicurious.com, bonappetit.com, and tastingtable.com to include Twix in their best-of candy and snack roundups, leading with Twix's cookie-caramel-chocolate texture story and available flavor range as the primary pitch angle. These three outlets run the best-of roundup format that earns 9 of 14 competitive citations in this category, and concrete product attributes are the inclusion driver in 12 of 14 posts that cite competitor brands.",
+    "actions": [
+      {
+        "title": "Pitch epicurious.com for inclusion in its best candy bars or caramel chocolate roundup.",
+        "tasks": [
+          "Research Epicurious candy and caramel roundup coverage to sharpen the pitch angle",
+          "Write and send the Epicurious pitch leading with Twix's cookie-caramel-chocolate texture story"
+        ]
+      },
+      {
+        "title": "Pitch bonappetit.com and tastingtable.com with the same texture-led product angle.",
+        "tasks": [
+          "Research the roundup formats at bonappetit.com and tastingtable.com before writing a word",
+          "Write and send a tailored texture-led pitch to the candy and food editors at bonappetit.com and tastingtable.com"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 10",
+    "title": "Build a Twix flavor comparison page on twix.com",
+    "category": "Owned Content",
+    "description": "Publish a dedicated page that directly compares all current Twix flavors, covering cookie base, caramel type, chocolate layer, and texture differences in a structured table alongside plain-English taste descriptions. The twix.com/twix-all-products page is being cited by Google AI Overviews and Perplexity but is not producing any flavor recommendations, because a single aggregated listing cannot compete with third-party pages that each address one narrow comparison angle.",
+    "actions": [
+      {
+        "title": "Add a specs table comparing each flavor's cookie, caramel, and chocolate attributes.",
+        "tasks": [
+          "Draft the flavor comparison table with attribute rows for each Twix variant",
+          "Publish the comparison table as a structured page at a crawlable URL on twix.com with FAQPage schema"
+        ]
+      },
+      {
+        "title": "Lead the page with a direct one-paragraph answer naming each flavor and its key difference.",
+        "tasks": [
+          "Write the opening paragraph for the Twix flavor comparison page",
+          "Build the flavor comparison table and publish the full page"
+        ]
+      },
+      {
+        "title": "Add FAQ schema covering the most common flavor comparison questions.",
+        "tasks": [
+          "Draft the FAQ schema questions and answers covering flavor comparison queries",
+          "Build and paste the FAQPage JSON-LD block onto twix.com/twix-all-products"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 11",
+    "title": "Add a Twix flavor history and discontinued products section to twix.com",
+    "category": "Owned Content Gap",
+    "description": "Publish a page or section on twix.com covering the full Twix flavor timeline, including current variants, limited editions like the 2025 Snickerdoodle launch, and historically discontinued flavors such as Peanut Butter Twix and Triple Chocolate. ChatGPT is already citing historyoasis.com for discontinued Twix flavors and flavor365.org for a comprehensive flavor guide on the 'what's the difference between Twix flavors' query, meaning there is active demand for this content and it is currently being served entirely by fan wikis and third-party history sites rather than the brand.",
+    "actions": [
+      {
+        "title": "Write a Twix flavor history page covering current, limited-edition, and discontinued variants.",
+        "tasks": [
+          "Research and compile the full Twix flavor inventory before writing",
+          "Write and publish the Twix flavor history page following the full content structure"
+        ]
+      },
+      {
+        "title": "Include a specs table comparing each flavor's key attributes and availability status.",
+        "tasks": [
+          "Compile the full flavor inventory and attribute data for the specs table",
+          "Build the specs comparison table and publish it within the flavor history section"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 12",
+    "title": "Add a Twix vs. Snickers comparison page to twix.com",
+    "category": "Competitive Content",
+    "description": "Publish a dedicated Twix vs. Snickers comparison page covering texture, ingredients, flavor profile, and calorie content in a side-by-side table, with Twix's cookie-caramel-chocolate structure as the differentiating frame. ChatGPT cites foodsguy.com, askdifference.com, and difference.wiki for dedicated Snickers vs. Twix head-to-head pages, and foodstruct.com is cited five times for nutrition comparisons on this query, while twix.com has one product listing citation and no comparison content at all.",
+    "actions": [
+      {
+        "title": "Build a Twix vs. Snickers comparison page with a specs table and texture-led differentiator.",
+        "tasks": [
+          "Draft the Twix vs. Snickers comparison page content",
+          "Publish the comparison page to twix.com and configure its metadata and schema"
+        ]
+      },
+      {
+        "title": "Add FAQ schema to the page covering common comparison questions.",
+        "tasks": [
+          "Draft the FAQPage JSON-LD schema block for the comparison page",
+          "Paste the validated schema into the comparison page and confirm rendering"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 13",
+    "title": "Get Twix onto sharing and movie night snack roundup sites",
+    "category": "Earned Media",
+    "description": "Pitch cozymeal.com, theguardian.com, and theweek.com to include Twix in their movie night snack and easy sharing snack roundups, leading with Twix's Fun Size and Minis formats as the practical sharing angle and its cookie-caramel texture as the standout product attribute. Across 'snack options for movie night' and 'easy snacks for sharing,' Twix earns zero mentions on ChatGPT, Perplexity, and Google AI Overviews, while the citation pools for both queries are built from exactly these kinds of roundup articles.",
+    "actions": [
+      {
+        "title": "Pitch cozymeal.com for its snacks-for-guests and movie night content.",
+        "tasks": [
+          "Identify the right Cozymeal content and pitch contact",
+          "Write and send the Cozymeal pitch"
+        ]
+      },
+      {
+        "title": "Pitch theguardian.com and theweek.com for their snack and candy roundup coverage.",
+        "tasks": [
+          "Research the right contacts and recent snack coverage at The Guardian and The Week",
+          "Write and send a targeted pitch to each outlet leading with Twix's sharing formats"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 14",
+    "title": "Publish a flavor comparison guide on twix.com",
+    "category": "Content Gap",
+    "description": "Create a single page on twix.com that describes each flavor variant, Caramel, Cookie Dough, Salted Caramel, Cookies and Creme, and Snickerdoodle, side by side, with a taste profile and texture note for each. Lead the page with a direct answer in the first 100 words so all three engines have a clear, brand-owned source to cite instead of fan sites and Left vs. Right marketing pages.",
+    "actions": [
+      {
+        "title": "Draft a flavor-by-flavor comparison page at twix.com/twix-flavors-guide.",
+        "tasks": [
+          "Gather and verify the taste profile and texture details for all five Twix variants",
+          "Draft the flavor comparison page content for twix.com/twix-flavors-guide",
+          "Publish the page in the brand CMS with Product schema markup and submit the URL for indexing"
+        ]
+      },
+      {
+        "title": "Open each flavor entry with one sentence naming its defining taste difference.",
+        "tasks": [
+          "Draft one defining-taste sentence for each of the five Twix flavor variants",
+          "Write the full comparison page copy, opening with a direct 100-word answer block",
+          "Build and publish the comparison page in the brand CMS with structured markup, then submit it for indexing"
+        ]
+      },
+      {
+        "title": "Replace Left vs. Right as the page's organizing frame with the five real variants.",
+        "tasks": [
+          "Draft the flavor comparison page copy and structure",
+          "Build and publish the page on twix.com at a clean, canonical URL",
+          "Add internal links to the new comparison page from the existing high-traffic twix.com pages"
+        ]
+      },
+      {
+        "title": "Submit the new URL to Google Search Console after publishing.",
+        "tasks": [
+          "Confirm the new flavor comparison page URL and submit it to Google Search Console for indexing",
+          "Verify that the submitted page is indexed and check for early citation signals across AI engines"
+        ]
+      },
+      {
+        "title": "Pitch the page URL to snackandbakery.com and confectionerynews.com as a reference link.",
+        "tasks": [
+          "Identify the right editorial contact at each outlet and draft a pitch email",
+          "Send the pitch to your primary target and include the comparison page URL as the reference link",
+          "Follow up with the second outlet after the first response window closes"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 15",
+    "title": "Publish a Twix brand story page optimized for 'why is Twix so popular'",
+    "category": "Owned Content Gap",
+    "description": "Create a standalone editorial page on twix.com that directly answers why Twix is popular, covering the cookie-caramel-chocolate texture combination, the brand's origin story, the Left/Right campaign, and any sales or cultural recognition milestones. The found-but-not-cited URL twix.com/de/en/our-story exists but is a regional German-English page that ChatGPT passes over in favor of warc.com and snackhistory.com for brand narrative content. A US-market page structured to answer the popularity question would give ChatGPT and Google AI Overviews an owned source to cite instead.",
+    "actions": [
+      {
+        "title": "Write a US-market brand story page answering why Twix is popular.",
+        "tasks": [
+          "Draft the US-market brand story page content for twix.com",
+          "Publish the page at a US-market URL and submit it for indexing"
+        ]
+      },
+      {
+        "title": "Lead the page with a direct answer paragraph covering texture, heritage, and the Left/Right campaign.",
+        "tasks": [
+          "Write the opening answer block and body sections for the US brand story page",
+          "Publish the page and verify it is indexable and structurally complete"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 16",
+    "title": "Earn a Twix mention on sporked.com and tastingtable.com",
+    "category": "Earned Media",
+    "description": "Pitch sporked.com and tastingtable.com for Twix inclusion in their candy bar ranking and best-caramel-chocolate coverage. Sporked already describes Twix positively as 'a crunchy classic that totally holds up' and is cited on both the popularity and comparison queries, meaning an editor relationship is already partially established through existing coverage. Tastingtable.com appears in the earned-media sources in the winning-patterns data and runs the taste-test ranking format that is the second most common way competitors earn citations across this brand's queries.",
+    "actions": [
+      {
+        "title": "Pitch sporked.com to include Twix in a caramel candy bar ranking.",
+        "tasks": [
+          "Identify the right Sporked editor and draft the pitch",
+          "Send the pitch and include Tastingtable.com as a parallel target"
+        ]
+      },
+      {
+        "title": "Pitch tastingtable.com for Twix inclusion in a chocolate candy bar taste test.",
+        "tasks": [
+          "Identify the right Tasting Table editor and angle for a Twix pitch",
+          "Send a focused pitch to the identified Tasting Table contact"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 17",
+    "title": "Earn a mention on snackandbakery.com and confectionerynews.com at next flavor launch",
+    "category": "Earned Media",
+    "description": "These two trade publications account for 3 of ChatGPT's citations on flavor-related Twix queries and are the primary channel through which ChatGPT learns about new product variants. Coordinate a targeted pitch to both outlets at the next flavor launch or product news moment, providing a fact sheet that frames the flavor's distinct ingredients and taste profile rather than just the press announcement.",
+    "actions": [
+      {
+        "title": "Identify the editorial contacts at snackandbakery.com and confectionerynews.com.",
+        "tasks": [
+          "Find the editorial contacts at Snack & Bakery and Confectionery News",
+          "Document each contact's editorial preferences based on their past Twix coverage",
+          "Draft a one-page editorial briefing sheet to accompany the pitch at next flavor launch"
+        ]
+      },
+      {
+        "title": "Prepare a flavor-focused fact sheet with taste profile, texture detail, and target occasion.",
+        "tasks": [
+          "Build the flavor fact sheet with taste, texture, and occasion detail",
+          "Write separate pitch notes for snackandbakery.com and confectionerynews.com that reference their prior Twix coverage",
+          "Time the pitch send and confirm the fact sheet is structured for AI citation"
+        ]
+      },
+      {
+        "title": "Time the pitch to coincide with the next variant launch or limited-edition announcement.",
+        "tasks": [
+          "Build a flavor-specific fact sheet for the next variant launch",
+          "Identify the right editor contact at each outlet and draft a tailored pitch for each",
+          "Send pitches on launch day and follow up within five business days"
+        ]
+      },
+      {
+        "title": "Follow up with a product sample send alongside the written pitch.",
+        "tasks": [
+          "Build a flavor-focused fact sheet for the launch pitch",
+          "Ship product samples to snackandbakery.com and confectionerynews.com editorial contacts before the pitch lands",
+          "Send individually personalized pitch emails to each publication and track response"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 18",
+    "title": "Restructure twix.com product pages to earn ChatGPT recommendations",
+    "category": "Content Structure",
+    "description": "The existing product pages at twix.com/twix-all-products and individual flavor pages are being cited by ChatGPT in 18 of 36 runs but producing zero recommendations, because the pages are structured as ingredient lists and taglines rather than answers to a shopper's question. Rewrite the opening paragraph of each flavor page so it leads with what makes that flavor distinct, what occasion it suits best, and how it differs from the classic Caramel, before ingredient lists and marketing copy.",
+    "actions": [
+      {
+        "title": "Audit twix.com/twix-all-products and each flavor product page for opening-paragraph structure.",
+        "tasks": [
+          "Map the current opening paragraph of each flavor page against a structured scoring rubric",
+          "Draft replacement opening paragraphs for each flavor page using a consistent answer-first structure",
+          "Deliver the drafted copy to the web team with annotated markup showing exact replacement points on each page"
+        ]
+      },
+      {
+        "title": "Rewrite each page's first 100 words to lead with a direct flavor description and use case.",
+        "tasks": [
+          "Draft a direct flavor description and use case for each of the five flavor pages",
+          "Publish the rewritten opening paragraphs to each flavor page in the brand CMS",
+          "Submit the five updated flavor page URLs to Google Search Console for re-indexing and verify ChatGPT can reach the canonical pages"
+        ]
+      },
+      {
+        "title": "Remove or de-index sweepstakes PDF files from the main site crawl path.",
+        "tasks": [
+          "Identify every sweepstakes PDF in the twix.com crawl path and map how ChatGPT is reaching them",
+          "Add a noindex directive and disallow rule to each sweepstakes PDF identified",
+          "Request removal of already-indexed sweepstakes PDFs from Google's index and verify the crawl path is clear"
+        ]
+      },
+      {
+        "title": "Set canonical tags on US product pages to prevent regional subdomains from competing.",
+        "tasks": [
+          "Audit the current canonical tag setup across US product pages and regional subdomains",
+          "Define the correct canonical URL for each flavor page and regional variant",
+          "Implement and verify canonical tags on all in-scope pages"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 19",
+    "title": "Get Twix featured on purewow.com/food for snack and sharing queries",
+    "category": "Tastemaker Outreach",
+    "description": "purewow.com/food earns 3 Google AI Overviews citations and 1 Perplexity citation on the 'easy snacks for sharing' query, making it the only non-YouTube domain that both engines independently cite for this topic. Securing a Twix mention or feature in an existing or upcoming purewow.com food roundup, whether as a Fun Size addition to a snack board or as a no-cook entertaining option, would put Twix directly inside the content pool that both Perplexity and Google AI Overviews are already drawing from.",
+    "actions": [
+      {
+        "title": "Identify the editorial contact handling food and entertaining content at purewow.com.",
+        "tasks": [
+          "Find the editorial contact handling food and entertaining content at purewow.com",
+          "Review the three cited purewow.com/food articles to identify where a Twix mention fits naturally",
+          "Draft a short outreach pitch to the confirmed PureWow food contact"
+        ]
+      },
+      {
+        "title": "Pitch a TWIX Minis inclusion in an existing or upcoming snack board roundup.",
+        "tasks": [
+          "Identify the right PureWow food editor or contributor to contact",
+          "Draft a 150-word pitch that positions TWIX Minis as a snack-board sweet element",
+          "Send the pitch and track response against a 10-day follow-up window"
+        ]
+      },
+      {
+        "title": "Provide a product sample alongside the pitch to facilitate firsthand coverage.",
+        "tasks": [
+          "Identify the specific purewow.com food editors and contributors who cover snack roundups",
+          "Assemble a sample package and write a 200-word pitch tailored to purewow.com's existing snack-board framing",
+          "Send the pitch and sample to the primary target editor and follow up once after 7 days"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 20",
+    "title": "Earn Twix coverage on cacaoandcardamom.com for the caramel chocolate category",
+    "category": "Tastemaker Outreach",
+    "description": "cacaoandcardamom.com accounts for 48 of 179 Google AI Overviews citations on the 'are gourmet chocolate bars worth the price' query, making it the single most leveraged third-party surface for that engine on any chocolate quality topic. The same domain is also cited by ChatGPT. A mention of Twix as the approachable, widely loved benchmark on the accessible end of the chocolate quality spectrum, within cacaoandcardamom.com's existing 'why is gourmet chocolate so expensive' content or a future piece, would place Twix inside the most-cited source in this entire category.",
+    "actions": [
+      {
+        "title": "Identify the author or editor at cacaoandcardamom.com handling chocolate explainer content.",
+        "tasks": [
+          "Read the target content on cacaoandcardamom.com before doing anything else",
+          "Find the author or editor name behind the chocolate explainer content on cacaoandcardamom.com",
+          "Verify the contact details and confirm the right outreach channel before closing this task"
+        ]
+      },
+      {
+        "title": "Pitch a Twix mention as the mass-market benchmark in a gourmet-versus-accessible comparison piece.",
+        "tasks": [
+          "Read the target content and map where a Twix mention fits naturally",
+          "Draft a pitch that frames Twix as the accessible end of the quality spectrum, not a competitor to gourmet chocolate",
+          "Send the pitch, log the outreach, and set a follow-up date"
+        ]
+      },
+      {
+        "title": "Offer a product sample and a brief quote from the brand for editorial context.",
+        "tasks": [
+          "Read the existing cacaoandcardamom.com content and map where Twix could fit naturally",
+          "Draft a short editorial pitch and prepare a sample request for the cacaoandcardamom.com author",
+          "Coordinate sample shipment and deliver the approved spokesperson quote"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "twix",
+    "account_name": "Twix",
+    "blind_id": "Opportunity 21",
+    "title": "Build a movie night snack occasion page on twix.com",
+    "category": "Occasion Content",
+    "description": "Create a dedicated page on twix.com framed around movie night snacking, featuring TWIX Minis and Fun Size as no-prep sweet additions to a movie night spread, alongside a simple snack board idea incorporating multiple TWIX flavors. This is the format Perplexity and Google AI Overviews are already rewarding: jollytime.com earns 3 Google AI Overviews citations and 1 Perplexity citation from a single movie-night page, while Hershey's earns citations on both engines from their hersheyland.com/family-night hub. Twix has product descriptions that mention movie night but no dedicated occasion page that can be cited.",
+    "actions": [
+      {
+        "title": "Build a movie night snack occasion page at a URL such as twix.com/movie-night-snacks.",
+        "tasks": [
+          "Draft the page outline and core content for twix.com/movie-night-snacks",
+          "Build and publish the page in the twix.com CMS at the /movie-night-snacks URL",
+          "Submit the new URL for indexing and verify crawl pickup within 7 days of publish"
+        ]
+      },
+      {
+        "title": "Frame the page around no-prep sharing with TWIX Minis, Fun Size, and Share Size formats.",
+        "tasks": [
+          "Draft the page brief and content outline for the movie night snack occasion page",
+          "Write and publish the occasion page on twix.com with the no-prep sharing frame in the first 150 words",
+          "Validate the published page against the citation patterns in this report and flag it for re-evaluation in 30 days"
+        ]
+      },
+      {
+        "title": "Include a simple snack board idea naming two or three TWIX flavor combinations.",
+        "tasks": [
+          "Draft the snack board copy naming two to three TWIX flavor combinations",
+          "Structure the snack board block for citation by AI engines",
+          "Submit the published page URL to Google Search Console and verify indexing"
+        ]
+      },
+      {
+        "title": "Pitch the page to jollytime.com's editorial team for a mention or linking consideration.",
+        "tasks": [
+          "Identify the right contact at jollytime.com's editorial team",
+          "Draft a short pitch proposing a TWIX mention or link within the jollytime.com movie-night page",
+          "Follow up once and log the outcome in the brand's outreach tracker"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 1",
+    "title": "Get SyncPlacement listed on thatpitch.com and chartlex.com",
+    "category": "Earned Media Outreach",
+    "description": "Pitch the editors of thatpitch.com and chartlex.com to add SyncPlacement to their sync licensing roundups. These two domains together account for the majority of editorial citations across ChatGPT, Perplexity, and Google AI Overviews on every core query measured, and SyncPlacement appears on neither.",
+    "actions": [
+      {
+        "title": "Pitch thatpitch.com editors to include SyncPlacement in sync roundups.",
+        "tasks": [
+          "Research thatpitch.com's sync roundup format and identify SyncPlacement's placement angle",
+          "Write and send a roundup-inclusion pitch to thatpitch.com"
+        ]
+      },
+      {
+        "title": "Pitch chartlex.com editors to add SyncPlacement to indie artist sync guides.",
+        "tasks": [
+          "Research chartlex.com's existing sync licensing roundups and map SyncPlacement's fit",
+          "Write and send a targeted pitch to chartlex.com for inclusion in their sync guides"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 2",
+    "title": "Pitch coverage on blog.songtrust.com and diymusician.cdbaby.com as a sync outreach tool",
+    "category": "Earned Media Outreach",
+    "description": "Contact the editorial teams at blog.songtrust.com and diymusician.cdbaby.com and propose a placement for SyncPlacement in their sync licensing or music business content. Both domains are consistently cited by Perplexity across multiple queries in this plan, reaching independent artists in the exact audience SyncPlacement serves, yet neither mentions SyncPlacement.",
+    "actions": [
+      {
+        "title": "Pitch blog.songtrust.com a short contributed perspective on direct music supervisor outreach.",
+        "tasks": [
+          "Research the editorial team and recent content at blog.songtrust.com",
+          "Identify the exact content gap your pitch will fill on Songtrust's blog",
+          "Write the pitch email to the Songtrust editorial contact",
+          "Send the pitch and log the outreach for follow-up"
+        ]
+      },
+      {
+        "title": "Pitch diymusician.cdbaby.com for inclusion in an existing sync licensing overview or resource roundup.",
+        "tasks": [
+          "Identify the right editorial contact at diymusician.cdbaby.com",
+          "Find the specific articles on diymusician.cdbaby.com that cover sync licensing overviews or resource roundups",
+          "Draft a concise pitch email tailored to the identified article and contact",
+          "Send the pitch and log the outreach for follow-up"
+        ]
+      },
+      {
+        "title": "Frame both pitches around what independent artists can do that submission platforms cannot do for them.",
+        "tasks": [
+          "Map the editorial angle for each publication before writing anything",
+          "Draft the core pitch argument that both emails will share",
+          "Write and send the Songtrust Blog pitch",
+          "Write and send the DIY Musician (CD Baby) pitch",
+          "Log both outreach attempts and set a follow-up date"
+        ]
+      },
+      {
+        "title": "Provide a ready-to-use product blurb (50 to 75 words) to reduce editorial friction.",
+        "tasks": [
+          "Write the 50-to-75-word product blurb for editorial use",
+          "Find the correct editorial contact at each publication",
+          "Write and send a short pitch email to each editorial contact",
+          "Follow up once if no reply within 10 business days"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 3",
+    "title": "Publish a step-by-step guide to pitching music supervisors directly",
+    "category": "Owned Content Creation",
+    "description": "Write a practical, how-to guide on syncplacement.com that walks independent artists through the full process of identifying, researching, and contacting music supervisors for film and TV placements. Perplexity cites practitioner-written, step-by-step content for every query in this space, and SyncPlacement currently has no editorial content at all for the engine to pull from.",
+    "actions": [
+      {
+        "title": "Write a 1,200-plus word guide covering how to identify, vet, and contact music supervisors.",
+        "tasks": [
+          "Research the 10 most-cited practitioner sources on pitching music supervisors",
+          "Build the guide outline using the structural patterns you found",
+          "Write the full guide to a minimum of 1,200 words with a practitioner voice",
+          "Publish the guide on syncplacement.com and configure the page for AI citation",
+          "Re-run the 8 Perplexity queries two weeks after publishing and record citation status"
+        ]
+      },
+      {
+        "title": "Open the guide with the concrete answer in the first 100 words, then expand with steps.",
+        "tasks": [
+          "Draft the guide's opening paragraph to lead with the direct answer",
+          "Outline the full step-by-step body of the guide using SyncPlacement's own product workflow as the structure",
+          "Write the full guide body, embedding one concrete example per major step",
+          "Publish the guide on syncplacement.com with a URL and page title structured for the target queries"
+        ]
+      },
+      {
+        "title": "Include named examples of supervisor search criteria (genre, mood, reference artist).",
+        "tasks": [
+          "Map the 8 active Perplexity queries to a single article outline",
+          "Build the named-examples library for genre, mood, and reference artist criteria",
+          "Write the guide as a sequenced, numbered how-to with named examples embedded throughout",
+          "Format the published page so Perplexity can parse and cite discrete answers",
+          "Re-run the 8 Perplexity queries 2 weeks after publish and record citation status"
+        ]
+      },
+      {
+        "title": "Publish at syncplacement.com/guide or a clear editorial URL, not behind the tool login.",
+        "tasks": [
+          "Audit the 8 active Perplexity queries to extract the exact structure and sources being cited",
+          "Draft the step-by-step guide using the structure and gaps you identified",
+          "Publish the guide at syncplacement.com/guide as a public, crawlable page",
+          "Re-run the 8 Perplexity queries two weeks after publishing and record whether the guide is cited"
+        ]
+      },
+      {
+        "title": "Submit the published URL to Perplexity's feedback form to prompt indexing.",
+        "tasks": [
+          "Locate the Perplexity feedback and URL submission form",
+          "Confirm the guide URL is live, crawlable, and resolves without errors before submitting",
+          "Fill out and submit the Perplexity feedback form with the guide URL and a plain-English description",
+          "Submit the guide URL to Bing Webmaster Tools to reach Perplexity's secondary crawl source",
+          "Check Perplexity citation status against the 8 target queries after two weeks"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 4",
+    "title": "Publish a sync supervisor outreach guide on syncplacement.com",
+    "category": "Owned Content",
+    "description": "Build a dedicated guide page at syncplacement.com explaining how independent artists find and pitch music supervisors directly, with SyncPlacement positioned as the practical tool in that workflow. Every core query in this report is answered by educational blog content, not product pages, and the homepage and about page are found but not cited because they carry no topical signal for these queries.",
+    "actions": [
+      {
+        "title": "Write a step-by-step music supervisor outreach guide for indie artists.",
+        "tasks": [
+          "Draft the sync supervisor outreach guide page for syncplacement.com",
+          "Add Article and FAQPage schema to the published guide"
+        ]
+      },
+      {
+        "title": "Add FAQ schema markup to the published guide page.",
+        "tasks": [
+          "Write and attach FAQPage JSON-LD schema to the published sync supervisor outreach guide"
+        ]
+      },
+      {
+        "title": "Submit the guide URL to Google Search Console after publishing.",
+        "tasks": [
+          "Submit the guide URL to Google Search Console for indexing"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 5",
+    "title": "Publish a musician-side video game sync submission guide",
+    "category": "Owned Content",
+    "description": "Write a dedicated page targeting musicians who want to get their music placed in video games, covering the direct outreach workflow including how to identify game audio supervisors and what to send them. The Songtrust blog is the only musician-facing source on this query cited across all three engines, and no sync outreach platform has any content in this space at all, making it a net-new content opportunity with no incumbent competition.",
+    "actions": [
+      {
+        "title": "Write a musician-to-game placement guide covering direct supervisor outreach.",
+        "tasks": [
+          "Draft the musician-to-game-placement guide as a fully structured article",
+          "Publish the guide and configure schema, metadata, and internal linking"
+        ]
+      },
+      {
+        "title": "Pitch the guide to melodyrights.com and twostorymelody.com, which are already cited for this query.",
+        "tasks": [
+          "Pitch melodyrights.com and twostorymelody.com for a link to the published guide"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 6",
+    "title": "Establish SyncPlacement in r/synclicensing and r/musicbusiness on Perplexity-cited threads",
+    "category": "Community Presence",
+    "description": "Contribute substantively to the specific r/synclicensing and r/musicbusiness threads that Perplexity and ChatGPT are already citing, and participate in new threads where direct outreach questions come up, positioning SyncPlacement as the tool for finding verified music supervisor contacts. These two subreddits appear in citation pools across Perplexity, ChatGPT, and Google AI Overviews on at least four separate queries, and SyncPlacement has zero presence in any of them.",
+    "actions": [
+      {
+        "title": "Contribute to r/synclicensing threads where direct supervisor outreach is discussed.",
+        "tasks": [
+          "Identify and map the specific r/synclicensing threads Perplexity is already citing",
+          "Write and post substantive replies in the highest-value cited threads"
+        ]
+      },
+      {
+        "title": "Contribute to r/musicbusiness threads that cover sync platform comparisons and recommendations.",
+        "tasks": [
+          "Identify which r/musicbusiness threads are already cited by AI engines and map the gaps",
+          "Write and post substantive comments in the highest-traffic cited threads"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 7",
+    "title": "Publish a sync licensing outreach guide for indie artists",
+    "category": "Owned Content",
+    "description": "Build a standalone editorial guide at a dedicated URL (such as syncplacement.com/sync-licensing-guide) that explains the process of finding and pitching music supervisors directly, leading with a clear definition and outcome statement in the first 100 words, followed by a step-by-step workflow and FAQ section. Every core query measured rewards educational, process-oriented content from dedicated guide pages, not product homepages, and SyncPlacement currently has no content of this format in any engine's citation pool.",
+    "actions": [
+      {
+        "title": "Write the guide leading with a direct answer about what direct-outreach sync licensing is.",
+        "tasks": [
+          "Draft the guide structure and opening definition block",
+          "Write and publish the full guide with schema markup"
+        ]
+      },
+      {
+        "title": "Add FAQ schema markup to the published guide page.",
+        "tasks": [
+          "Draft and attach FAQPage JSON-LD schema to the guide page"
+        ]
+      },
+      {
+        "title": "Submit the guide to Google Search Console after publishing.",
+        "tasks": [
+          "Publish the guide at syncplacement.com/sync-licensing-guide",
+          "Submit the published guide URL to Google Search Console for indexing"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 8",
+    "title": "Reframe SyncPlacement's homepage to lead with the direct-outreach value proposition",
+    "category": "Owned Content",
+    "description": "Rewrite the homepage opening so the first 100 words clearly define SyncPlacement as a music supervisor contact discovery tool for direct outreach, not a sync submission platform, and include a concrete use-case example and a next-step call to action. Google AI Overviews currently mentions SyncPlacement 8 times on the 'where to pitch music for film and TV' query but gives it a near-bottom sentiment score of 0.11, while competitors like Marmoset and Position Music earn positive sentiment of 0.84 and actual recommendations. The current homepage framing is likely contributing to the neutral-to-negative sentiment signal.",
+    "actions": [
+      {
+        "title": "Rewrite the homepage opening to lead with a direct-outreach use-case example.",
+        "tasks": [
+          "Rewrite the homepage opening with a direct-outreach definition and use-case example",
+          "Add a Key Takeaway block and FAQ section tuned to the film and TV pitching query"
+        ]
+      },
+      {
+        "title": "Add a clear next-step call to action in the first visible section of the page.",
+        "tasks": [
+          "Write and place a direct-answer opening paragraph with a next-step CTA in the homepage hero section"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 9",
+    "title": "Earn coverage on orphiq.com and dropcue.app resource pages",
+    "category": "Earned Media Outreach",
+    "description": "Pitch the teams behind orphiq.com and dropcue.app to add SyncPlacement to their existing sync platform resource and comparison pages. Both domains are cited by ChatGPT and Google AI Overviews on multiple queries, making them the highest-leverage editorial outreach targets for those two engines specifically.",
+    "actions": [
+      {
+        "title": "Pitch orphiq.com to add SyncPlacement to its sync-licensing-platforms resource page.",
+        "tasks": [
+          "Map the orphiq.com resource page and identify the exact placement ask",
+          "Write and send the pitch to the orphiq.com editorial contact"
+        ]
+      },
+      {
+        "title": "Pitch dropcue.app to include SyncPlacement in its sync licensing company lists.",
+        "tasks": [
+          "Map dropcue.app's existing sync licensing lists to find where SyncPlacement fits",
+          "Pitch the dropcue.app team to add SyncPlacement to their sync platform lists"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 10",
+    "title": "Close the Perplexity gap on music supervisor discovery queries",
+    "category": "Perplexity Visibility",
+    "description": "Earn coverage on the sources Perplexity actually pulls from for these queries: thesyncreport.com, aristake.com, and the r/musicbusiness and r/synclicensing subreddits. Perplexity reaches zero SyncPlacement content on every query measured, while thesyncreport.com earns a recommendation rate of 22 percent on Perplexity for the 'how to find music supervisors' query and aristake.com earns 6 recommendations on the same engine.",
+    "actions": [
+      {
+        "title": "Pitch thesyncreport.com to include SyncPlacement in its supervisor discovery coverage.",
+        "tasks": [
+          "Research thesyncreport.com's supervisor discovery coverage and identify the placement angle",
+          "Send a targeted pitch to thesyncreport.com for inclusion in supervisor discovery coverage"
+        ]
+      },
+      {
+        "title": "Contribute a substantive comment or resource in r/synclicensing and r/musicbusiness threads.",
+        "tasks": [
+          "Identify active threads in r/synclicensing and r/musicbusiness where SyncPlacement can add genuine value",
+          "Write and post a substantive comment in each flagged thread"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 11",
+    "title": "Publish a comparison page: SyncPlacement vs. submission platforms for indie artists",
+    "category": "Owned Content Creation",
+    "description": "Create a dedicated page on syncplacement.com that directly compares SyncPlacement with submission-model services like Songtradr, Musicbed, and Bodega Sync, explaining when each type of tool is the right choice. Perplexity's citation pattern for 'sync placement service comparison guide' and 'best sync licensing service for indie artists 2026' shows it pulls from comparison-style content across 10 different domains. Publishing a comparison page gives Perplexity a citable owned source for exactly the query framing that currently returns zero SyncPlacement results.",
+    "actions": [
+      {
+        "title": "Build a page at syncplacement.com/compare or similar that opens with a clear summary table.",
+        "tasks": [
+          "Map the competitor landscape and define the comparison framework",
+          "Draft the comparison page copy starting with the summary table",
+          "Add structured markup so the comparison table is machine-readable",
+          "Write the page title, meta description, and H1 to match the exact query framing Perplexity is already answering",
+          "Submit the published URL for indexing and verify it appears in Gist GEO within two weeks"
+        ]
+      },
+      {
+        "title": "Include SyncPlacement, Songtradr, Musicbed, and Bodega Sync in the comparison with factual feature rows.",
+        "tasks": [
+          "Research and document factual feature data for all four platforms",
+          "Draft the comparison page structure and write the factual feature table",
+          "Add structured data markup to the comparison page",
+          "Publish the page and submit it for indexing",
+          "Check whether Perplexity cites the new page within two weeks of indexing"
+        ]
+      },
+      {
+        "title": "Address the 'which is right for me' question directly in the first 150 words of the page.",
+        "tasks": [
+          "Draft the 'which is right for me' answer block that opens the page",
+          "Build the side-by-side comparison table covering SyncPlacement, Songtradr, Musicbed, and Bodega Sync",
+          "Write the full page body around the answer block and table",
+          "Add structured markup and publish the page at a descriptive URL",
+          "Verify the page appears in Perplexity responses within two weeks of publishing"
+        ]
+      },
+      {
+        "title": "Add structured data (FAQ schema) so the comparison answers are machine-readable.",
+        "tasks": [
+          "Map the FAQ schema structure to the comparison page's key questions",
+          "Write and validate the FAQ schema JSON-LD block",
+          "Add the validated JSON-LD block to the comparison page in the brand's CMS",
+          "Request indexing and confirm Google has parsed the FAQ schema"
+        ]
+      },
+      {
+        "title": "Link the page from the homepage navigation so it is reachable without logging in.",
+        "tasks": [
+          "Locate the homepage navigation files and confirm the current menu structure",
+          "Create the comparison page URL slug and publish a placeholder so the link target exists before the nav is updated",
+          "Add the comparison page link to the homepage navigation for logged-out visitors",
+          "Write and publish the full comparison page body targeting the query framing Perplexity currently cites",
+          "Verify the published page is crawlable and submit it for indexing"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 12",
+    "title": "Get SyncPlacement listed on thatpitch.com, chartlex.com, and orphiq.com",
+    "category": "Earned Media",
+    "description": "Pitch the editors of thatpitch.com, chartlex.com, and orphiq.com to add SyncPlacement to their sync licensing roundups and comparison pages. These three domains account for the majority of citations across ChatGPT, Perplexity, and Google AI Overviews on every core query measured, and SyncPlacement is absent from all of them.",
+    "actions": [
+      {
+        "title": "Pitch thatpitch.com editors to add SyncPlacement to their sync company roundups.",
+        "tasks": [
+          "Research thatpitch.com's existing sync roundup structure and identify where SyncPlacement fits",
+          "Write and send a targeted pitch to thatpitch.com for a SyncPlacement listing"
+        ]
+      },
+      {
+        "title": "Pitch chartlex.com to include SyncPlacement in their indie artist sync guide.",
+        "tasks": [
+          "Research chartlex.com's indie artist sync coverage and identify the right placement angle",
+          "Write and send a targeted pitch to chartlex.com"
+        ]
+      },
+      {
+        "title": "Pitch orphiq.com to add SyncPlacement to their best-sync-platforms resource page.",
+        "tasks": [
+          "Research orphiq.com's sync platform resource page and map SyncPlacement's fit",
+          "Write and send a pitch to orphiq.com's editorial contact"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 13",
+    "title": "Get SyncPlacement listed on aristake.com and scoreascore.com",
+    "category": "Earned Media Outreach",
+    "description": "Pitch aristake.com and scoreascore.com for a mention or inclusion in their sync licensing content. Both domains are cited by Perplexity across multiple queries covering how to get music placed in films, ads, and TV, and neither currently mentions SyncPlacement. Because citations across these queries are fragmented with no single domain dominating, appearing on just two or three of them materially increases the chance SyncPlacement surfaces in Perplexity answers.",
+    "actions": [
+      {
+        "title": "Contact aristake.com editorial team and pitch SyncPlacement as a supervisor contact tool worth covering.",
+        "tasks": [
+          "Research the specific content on aristake.com and scoreascore.com that Perplexity is citing",
+          "Find the direct contact details for the editorial team or author at each site",
+          "Write a short, specific pitch for each site tailored to the content they already publish",
+          "Send the pitches and log the outreach",
+          "Verify whether SyncPlacement appears in Perplexity answers after placement is confirmed"
+        ]
+      },
+      {
+        "title": "Contact scoreascore.com with a similar pitch focused on the direct-outreach angle.",
+        "tasks": [
+          "Find the specific scoreascore.com content that Perplexity is pulling for sync licensing queries",
+          "Draft a short, specific pitch email tailored to scoreascore.com's direct-outreach angle",
+          "Find the right contact at scoreascore.com and send the pitch",
+          "Send one follow-up if there is no response within 10 business days"
+        ]
+      },
+      {
+        "title": "Provide both sites with a one-paragraph product description they can embed with minimal editing.",
+        "tasks": [
+          "Research the exact pages on aristake.com and scoreascore.com that Perplexity is citing",
+          "Draft a one-paragraph product description of SyncPlacement tailored to each site's content format",
+          "Find the correct contact for each site and write a short outreach email",
+          "Send the pitches and log each outreach attempt with a follow-up date",
+          "Confirm placement and verify that Perplexity picks up SyncPlacement on the relevant queries"
+        ]
+      },
+      {
+        "title": "Request a named mention in an existing article rather than a standalone sponsored placement.",
+        "tasks": [
+          "Map the exact articles and content sections on aristake.com and scoreascore.com that Perplexity is pulling",
+          "Find the correct editorial contact for each domain",
+          "Draft a short, specific pitch for each domain referencing the article by name",
+          "Send each pitch and record the outreach in a follow-up tracker",
+          "Verify citation status in Perplexity two to three weeks after each article is updated"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 14",
+    "title": "Position SyncPlacement clearly as an outreach tool, not a sync library",
+    "category": "Messaging and Positioning",
+    "description": "Update product descriptions, meta copy, and the about page to make explicit that SyncPlacement is a music supervisor contact discovery tool for direct outreach, not a catalog submission service. Across every query measured, AI engines default to framing 'sync platform' questions as submission marketplace questions, and SyncPlacement is either absent or conflated with passive library platforms as a result.",
+    "actions": [
+      {
+        "title": "Rewrite the about page to explicitly contrast direct outreach with passive submission models.",
+        "tasks": [
+          "Draft the about page rewrite with an explicit outreach-versus-submission contrast",
+          "Update the meta title, meta description, and URL slug to reflect outreach positioning"
+        ]
+      },
+      {
+        "title": "Update meta descriptions on syncplacement.com and syncplacement.com/about-us to name the outreach-tool category.",
+        "tasks": [
+          "Rewrite the meta description for syncplacement.com (homepage)",
+          "Rewrite the meta description for syncplacement.com/about-us"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 15",
+    "title": "Publish a sync licensing comparison guide for indie artists",
+    "category": "Owned Content",
+    "description": "Build a dedicated comparison page at syncplacement.com that walks through the difference between passive sync libraries, submission platforms, and direct supervisor outreach tools, with SyncPlacement placed in the outreach-tool category. Dropcue.app and orphiq.com earn citations across multiple engines on every comparison-format query precisely because they publish this kind of structured comparison content, which SyncPlacement currently does not have.",
+    "actions": [
+      {
+        "title": "Write a comparison page covering sync libraries vs. submission platforms vs. outreach tools.",
+        "tasks": [
+          "Draft the comparison page content at syncplacement.com/sync-licensing-guide (or equivalent URL)",
+          "Publish the page and submit it for indexing via Google Search Console"
+        ]
+      },
+      {
+        "title": "Add structured data and internal links to the published comparison page.",
+        "tasks": [
+          "Add Article and FAQPage schema to the comparison page",
+          "Build internal links from existing SyncPlacement pages to the comparison guide"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 16",
+    "title": "Reframe syncplacement.com homepage to lead with the outreach workflow",
+    "category": "Owned Page Optimization",
+    "description": "Restructure the homepage so its opening section directly answers 'how do I find and contact music supervisors as an indie artist,' with SyncPlacement named as the mechanism. The current homepage is found by ChatGPT and Google AI Overviews on multiple queries but not cited, and a sentiment score of 0.11 on the 'where to pitch music for film and TV' query suggests the framing the engines read is not earning confidence.",
+    "actions": [
+      {
+        "title": "Rewrite the homepage hero section to lead with the supervisor outreach use case.",
+        "tasks": [
+          "Draft the revised hero section copy using the outreach workflow as the opening answer",
+          "Publish the revised hero section and add FAQPage schema covering the supervisor outreach query"
+        ]
+      },
+      {
+        "title": "Add use-case examples and eligibility context for independent artists above the fold.",
+        "tasks": [
+          "Rewrite the above-the-fold section to directly answer the indie artist outreach question",
+          "Add two to three concrete use-case examples with eligibility context to the homepage body"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 17",
+    "title": "Clarify SyncPlacement's category on the homepage to separate it from submission platforms",
+    "category": "Owned Page Optimization",
+    "description": "Rewrite the homepage hero and FAQ section so the first 100 words make explicit that SyncPlacement is a supervisor contact-discovery tool, not a music submission or licensing marketplace. Perplexity consistently reads queries in this space as requests for submission platforms like Songtradr or Musicbed, and conflates those with SyncPlacement's actual product. The current homepage language is accurate but does not clearly distinguish between the two categories, which matters because Perplexity uses page content to classify what a brand does.",
+    "actions": [
+      {
+        "title": "Add a single sentence near the top of the homepage that explicitly contrasts SyncPlacement with submission marketplaces.",
+        "tasks": [
+          "Draft the contrasting sentence before touching the homepage",
+          "Place the chosen sentence in the homepage hero section inside the CMS",
+          "Add a clarifying FAQ entry that repeats the category distinction in plain question-and-answer format",
+          "Verify the updated page content is being read correctly by checking how Perplexity classifies SyncPlacement after the changes go live"
+        ]
+      },
+      {
+        "title": "Use the FAQ to answer 'How is SyncPlacement different from Songtradr or Musicbed?' directly.",
+        "tasks": [
+          "Draft the direct comparison answer for the FAQ",
+          "Rewrite the homepage hero copy to lead with the category distinction",
+          "Add the drafted FAQ entry to the live FAQ section",
+          "Verify the updated pages read correctly in Perplexity and check for category reclassification"
+        ]
+      },
+      {
+        "title": "Ensure the phrase 'music supervisor contacts' appears in the page title and first heading.",
+        "tasks": [
+          "Audit the current homepage title tag, H1, and opening paragraph for category clarity",
+          "Write a revised page title tag and H1 that include 'music supervisor contacts' verbatim",
+          "Rewrite the hero section opening so the first 100 words draw a clear line between contact discovery and submission platforms",
+          "Update the homepage FAQ section to include a direct question distinguishing SyncPlacement from submission platforms",
+          "Publish all changes and verify the live page reflects the new title tag, H1, and FAQ entry"
+        ]
+      },
+      {
+        "title": "Review the existing FAQ answers at syncplacement.com for any language that could be mistaken for submission-platform framing.",
+        "tasks": [
+          "Audit the current FAQ page for submission-platform language",
+          "Draft replacement FAQ answers that make the contact-discovery category explicit",
+          "Publish the revised FAQ answers in the site CMS and verify the live page",
+          "Request a re-crawl of the FAQ page and verify Perplexity classification within two weeks"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 18",
+    "title": "Build a sync service comparison page to fix the ChatGPT found-but-not-cited gap",
+    "category": "Owned Content",
+    "description": "Create a dedicated comparison page (such as syncplacement.com/sync-platform-comparison) that directly contrasts SyncPlacement's active outreach model against the passive submission platforms that dominate AI answers, covering use cases, pricing transparency, and eligibility requirements. Both syncplacement.com and syncplacement.com/about-us were found but not cited by ChatGPT on the 'sync placement service comparison guide' query, meaning the content exists but does not match the comparison format the engine is rewarding via dropcue.app and orphiq.com.",
+    "actions": [
+      {
+        "title": "Build a comparison page contrasting SyncPlacement against passive submission platforms.",
+        "tasks": [
+          "Draft and build the sync platform comparison page at syncplacement.com/sync-platform-comparison",
+          "Submit the new comparison page URL to Google Search Console and add two internal links pointing to it from existing site pages"
+        ]
+      },
+      {
+        "title": "Include a pricing transparency section and eligibility requirements inline on the page.",
+        "tasks": [
+          "Draft the pricing transparency and eligibility sections for the comparison page",
+          "Build and publish the comparison page at syncplacement.com/sync-platform-comparison with full schema and FAQ section"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 19",
+    "title": "Reframe the homepage to position SyncPlacement within the sync pitching process",
+    "category": "Owned Page Optimization",
+    "description": "Restructure the homepage so it explicitly maps SyncPlacement to the step in the sync licensing process where an artist is ready to pitch but does not know who to contact. Perplexity treats 'how to get music in films and ads' and 'how to pitch music for TV shows' as workflow questions and cites step-by-step content. SyncPlacement's homepage reads as a product pitch rather than a process answer, which limits the engine's ability to cite it in response to process-framed queries.",
+    "actions": [
+      {
+        "title": "Add a section to the homepage titled 'Where SyncPlacement fits in your sync workflow' with 3 to 4 steps.",
+        "tasks": [
+          "Map the sync licensing workflow as a numbered sequence before writing any copy",
+          "Draft the 'Where SyncPlacement fits in your sync workflow' section with 3 to 4 clearly labeled steps",
+          "Add the section to the SyncPlacement homepage in the CMS and place it above the fold or immediately below the hero",
+          "Verify the published section is crawlable and the page content reads correctly in plain text"
+        ]
+      },
+      {
+        "title": "Name the workflow step explicitly: 'Once you know your music is sync-ready, find who to pitch.'",
+        "tasks": [
+          "Map the sync pitching workflow and locate SyncPlacement's specific entry point",
+          "Rewrite the homepage hero section to name the workflow step explicitly",
+          "Add a workflow-context paragraph to the homepage body that mirrors how Perplexity frames process queries",
+          "Verify the rewritten homepage is crawlable and re-submit it for indexing"
+        ]
+      },
+      {
+        "title": "Use plain language that mirrors how independent artists describe the pitching process, not product marketing language.",
+        "tasks": [
+          "Map the sync pitching workflow from an artist's perspective",
+          "Audit the current homepage against the workflow map",
+          "Rewrite the homepage opening (first 150 words) to answer the workflow question directly",
+          "Update the rest of the homepage to follow process order, not feature order",
+          "Verify the rewritten homepage against the Gist GEO citation data after publishing"
+        ]
+      },
+      {
+        "title": "Ensure this section is in the page body (not behind a login) and appears above the pricing section.",
+        "tasks": [
+          "Map the sync pitching workflow and identify SyncPlacement's exact entry point",
+          "Audit the current homepage to find where the process-framing section will go",
+          "Write the process-framing section copy",
+          "Publish the new section above the pricing block and verify placement",
+          "Check whether Perplexity picks up the updated homepage in answers to the two target queries"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 20",
+    "title": "Earn a mention on thatpitch.com across its sync licensing guides",
+    "category": "Earned Media Outreach",
+    "description": "Reach out to thatpitch.com and pitch a placement for SyncPlacement in its existing sync licensing comparison and guide content. thatpitch.com is the single most-cited domain across multiple Perplexity queries in this space, appearing in the citation pool for at least three tracked queries, and it currently does not mention SyncPlacement anywhere.",
+    "actions": [
+      {
+        "title": "Identify thatpitch.com pages that compare or list sync tools and contact the editorial team.",
+        "tasks": [
+          "Map the thatpitch.com pages that list or compare sync tools",
+          "Find the editorial contact at thatpitch.com",
+          "Draft a short, specific pitch email for placement in the identified pages",
+          "Send the pitches and log every touchpoint"
+        ]
+      },
+      {
+        "title": "Pitch SyncPlacement as a distinct category: a supervisor contact-discovery tool, not a submission platform.",
+        "tasks": [
+          "Map the existing thatpitch.com content that Perplexity cites for sync licensing queries",
+          "Draft a one-page positioning brief that distinguishes SyncPlacement from submission platforms",
+          "Write and send a personalized pitch email to thatpitch.com",
+          "Follow up once and track the outcome against the citation data in Gist GEO"
+        ]
+      },
+      {
+        "title": "Offer a brief written explanation or Q&A they can use directly in an article or roundup.",
+        "tasks": [
+          "Map the specific thatpitch.com articles where SyncPlacement could fit",
+          "Draft a 250-word Q&A response the author can drop directly into an existing article",
+          "Find the right contact at thatpitch.com and send a personalized outreach email",
+          "Follow up once and log the outcome against this opportunity in Gist GEO"
+        ]
+      },
+      {
+        "title": "Follow up within 2 weeks if no response; try a different contact path (social or LinkedIn).",
+        "tasks": [
+          "Find the right contact at thatpitch.com before drafting anything",
+          "Draft a pitch email that leads with the gap, not a sales ask",
+          "Send the pitch and log the outreach date and method",
+          "Follow up at the 14-day mark using a different contact path if no reply"
+        ]
+      }
+    ]
+  },
+  {
+    "account": "sync",
+    "account_name": "syncplacement",
+    "blind_id": "Opportunity 21",
+    "title": "Close the Perplexity gap on music supervisor discovery queries",
+    "category": "Earned Media",
+    "description": "Get SyncPlacement mentioned on thesyncreport.com and aristake.com, the two specialist sources Perplexity cites and recommends most consistently on 'how to find music supervisors for sync licensing', where SyncPlacement currently has zero mentions despite matching the top recommendation counts on Google AI Overviews. Perplexity draws heavily from blog.sonicbids.com, thesyncreport.com, and aristake.com/sync-agents for this query and has not encountered syncplacement.com content in any form across any run.",
+    "actions": [
+      {
+        "title": "Pitch thesyncreport.com to include SyncPlacement in a supervisor discovery tools roundup.",
+        "tasks": [
+          "Research thesyncreport.com coverage and identify the right pitch angle",
+          "Write and send a pitch to thesyncreport.com proposing a SyncPlacement inclusion"
+        ]
+      },
+      {
+        "title": "Pitch aristake.com to add SyncPlacement alongside their sync-agents directory content.",
+        "tasks": [
+          "Research aristake.com/sync-agents to identify the exact placement format and editorial angle",
+          "Pitch aristake.com to include SyncPlacement in their sync-agents content"
+        ]
+      }
+    ]
+  }
+]
