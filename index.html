@@ -217,12 +217,15 @@ async function flushAndSubmit(){
   try{
     await postRating({kind:'submit', account:active, rater:STORE.name.trim(), session:STORE.session, rated, total:mine.length, ts:new Date().toISOString()});
     STORE.submitted[active]=Date.now(); persist();
-    render();
+    btn.disabled=false;
+    render();                 // refresh cards/progress FIRST...
     const nm=ACCOUNTS.find(a=>a.key===active).name;
-    $('note').className='note ok';
+    $('note').className='note ok';   // ...then set the note so render() can't wipe it
     $('note').textContent='✓ Thanks! Your '+nm+' ratings are recorded'+(flushed?' ('+flushed+' auto-saved on submit)':'')+'. You can switch accounts above.'+(failed?'  ⚠ '+failed+' failed to save — please retry those cards.':'');
-  }catch(e){ $('note').className='note'; $('note').innerHTML='<span class="msg err">Submit failed — please try again.</span>'; }
-  finally{ btn.disabled=false; render(); }
+  }catch(e){
+    btn.disabled=false; render();
+    $('note').className='note'; $('note').innerHTML='<span class="msg err">Submit failed — please try again.</span>';
+  }
 }
 
 function submitSet(){
