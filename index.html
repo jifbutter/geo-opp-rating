@@ -6,64 +6,81 @@
 <title>Rate GEO Opportunities</title>
 <style>
   :root{
-    --bg:#f6f7f9; --card:#fff; --border:#e5e7eb; --text:#111827; --muted:#6b7280;
-    --accent:#111827; --accentText:#fff; --save:#2563eb; --ok:#059669; --done:#86efac;
-    --doneBg:#f2fdf7; --chip:#eef2ff; --chipText:#3730a3;
+    --bg:#f6f7f9; --card:#fff; --border:#d7dbe0; --text:#111827; --muted:#54606e;
+    --accent:#111827; --accentText:#fff; --save:#1d4ed8; --ok:#047857; --done:#69cf9a;
+    --doneBg:#f0fbf5; --chip:#e5e9ff; --chipText:#312e81; --warn:#b45309; --warnBg:#fef6e7; --err:#b91c1c;
   }
   @media (prefers-color-scheme: dark){
-    :root{ --bg:#0b0d10; --card:#15181d; --border:#2a2f37; --text:#e8eaed; --muted:#9aa2ad;
-      --accent:#e8eaed; --accentText:#0b0d10; --save:#3b82f6; --ok:#34d399; --done:#2f6b4a;
-      --doneBg:#12211a; --chip:#1e2536; --chipText:#a5b4fc; }
+    :root{ --bg:#0b0d10; --card:#15181d; --border:#333a44; --text:#eceef1; --muted:#aab3bf;
+      --accent:#eceef1; --accentText:#0b0d10; --save:#4b8bf5; --ok:#34d399; --done:#2f6b4a;
+      --doneBg:#12211a; --chip:#252d40; --chipText:#c7d2fe; --warn:#fbbf24; --warnBg:#2a2213; --err:#f87171; }
   }
   *{box-sizing:border-box}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-  .wrap{max-width:800px;margin:0 auto;padding:22px 16px 80px}
+  .wrap{max-width:800px;margin:0 auto;padding:22px 16px 90px}
   h1{font-size:21px;margin:0 0 4px}
-  .sub{color:var(--muted);font-size:13px;margin-bottom:16px;line-height:1.5}
-  .who{margin-bottom:14px}
-  .who label{font-size:13px;color:var(--muted);display:block;margin-bottom:4px}
-  .who input{padding:9px 11px;border:1px solid var(--border);border-radius:9px;font-size:15px;width:min(300px,100%);background:var(--card);color:var(--text)}
+  .sub{color:var(--muted);font-size:13.5px;margin-bottom:16px;line-height:1.55}
+  .who{margin-bottom:8px;display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+  .who label{font-size:13px;color:var(--muted);display:block;margin-bottom:5px}
+  .who input{padding:11px 12px;border:1px solid var(--border);border-radius:9px;font-size:15px;width:min(300px,100%);background:var(--card);color:var(--text)}
+  .freshBtn{padding:10px 14px;border:1px solid var(--border);background:transparent;color:var(--muted);border-radius:9px;cursor:pointer;font-size:13px;min-height:44px}
+  .help{font-size:12.5px;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:9px;padding:9px 12px;margin:6px 0 14px;line-height:1.5}
+  .help b{color:var(--text)}
   .toggle{display:inline-flex;background:var(--border);border-radius:11px;padding:4px;margin-bottom:6px;flex-wrap:wrap}
-  .toggle button{border:none;background:transparent;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;color:var(--muted)}
+  .toggle button{border:none;background:transparent;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;color:var(--text);min-height:44px}
   .toggle button.on{background:var(--accent);color:var(--accentText)}
   .prog{position:sticky;top:0;background:var(--bg);padding:11px 2px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);z-index:5;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-  .bar{height:6px;background:var(--border);border-radius:99px;flex:1;min-width:120px;overflow:hidden}
+  .bar{height:7px;background:var(--border);border-radius:99px;flex:1;min-width:120px;overflow:hidden}
   .bar > i{display:block;height:100%;background:var(--ok);width:0;transition:width .2s}
+  .banner{border-radius:10px;padding:11px 13px;margin:12px 0;font-size:13.5px;line-height:1.5;display:none}
+  .banner.show{display:block}
+  .banner.warn{background:var(--warnBg);color:var(--warn);border:1px solid var(--warn)}
+  .banner .row{margin-top:9px;display:flex;gap:8px;flex-wrap:wrap}
+  .banner button{padding:9px 15px;border-radius:8px;border:1px solid currentColor;background:transparent;color:inherit;font-weight:600;cursor:pointer;font-size:13px;min-height:40px}
+  .banner button.primary{background:var(--ok);color:#fff;border-color:var(--ok)}
   .card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:18px;margin:14px 0}
   .card.done{border-color:var(--done);background:var(--doneBg)}
   .oid{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-  .cat{font-size:10px;background:var(--chip);color:var(--chipText);padding:2px 7px;border-radius:6px;font-weight:600}
+  .cat{font-size:10.5px;background:var(--chip);color:var(--chipText);padding:2px 8px;border-radius:6px;font-weight:700}
   .t{font-size:17px;font-weight:650;margin:4px 0 5px;line-height:1.35}
-  .desc{color:var(--text);font-size:14px;margin:6px 0;line-height:1.5;opacity:.92}
+  .desc{color:var(--text);font-size:14px;margin:6px 0;line-height:1.5;opacity:.95}
   .acts{margin:8px 0 4px;padding-left:18px} .acts > li{font-size:13.5px;margin-bottom:4px;font-weight:550}
   .tasks{color:var(--muted);font-size:12.5px;padding-left:16px;margin:3px 0;font-weight:400}
-  .lbl{font-size:12px;color:var(--muted);margin:12px 0 6px;font-weight:600}
-  .rate{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 4px}
-  .rate button{width:38px;height:38px;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:9px;cursor:pointer;font-size:14px;font-weight:600}
+  .lbl{font-size:12.5px;color:var(--muted);margin:12px 0 6px;font-weight:600;display:block}
+  .rate{display:flex;gap:7px;flex-wrap:wrap;margin:2px 0 4px}
+  .rate button{min-width:44px;height:44px;border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:9px;cursor:pointer;font-size:15px;font-weight:600}
   .rate button.sel{background:var(--accent);color:var(--accentText);border-color:var(--accent)}
-  .rk{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);max-width:430px;margin-top:2px}
-  textarea{width:100%;border:1px solid var(--border);border-radius:9px;padding:10px;font-size:14px;min-height:56px;font-family:inherit;background:var(--card);color:var(--text);margin-top:6px}
-  .save{margin-top:12px;padding:9px 18px;border:none;background:var(--save);color:#fff;border-radius:9px;cursor:pointer;font-size:14px;font-weight:600}
-  .save.sec{background:transparent;color:var(--muted);border:1px solid var(--border)}
-  .ok{color:var(--ok);font-size:13px;margin-left:10px;font-weight:600}
-  .submit{width:100%;margin-top:8px;padding:15px;border:none;background:var(--ok);color:#fff;border-radius:11px;cursor:pointer;font-size:16px;font-weight:700}
-  .submit:disabled{opacity:.5;cursor:not-allowed}
-  .note{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
-  .err{color:#dc2626;font-size:13px}
+  .rate button:focus-visible{outline:3px solid var(--save);outline-offset:2px}
+  .rk{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);max-width:490px;margin-top:3px}
+  textarea{width:100%;border:1px solid var(--border);border-radius:9px;padding:10px;font-size:14px;min-height:56px;font-family:inherit;background:var(--card);color:var(--text);margin-top:2px}
+  .save{margin-top:12px;padding:11px 20px;border:none;background:var(--save);color:#fff;border-radius:9px;cursor:pointer;font-size:14px;font-weight:600;min-height:44px}
+  .save.sec{background:transparent;color:var(--text);border:1px solid var(--border)}
+  .msg{font-size:13px;margin-left:10px;font-weight:600}
+  .msg.ok{color:var(--ok)} .msg.err{color:var(--err)} .msg.warn{color:var(--warn)}
+  .submit{width:100%;margin-top:8px;padding:16px;border:none;background:var(--ok);color:#fff;border-radius:11px;cursor:pointer;font-size:16px;font-weight:700;min-height:44px}
+  .submit:disabled{opacity:.55;cursor:not-allowed}
+  .note{font-size:13px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5}
+  .note.ok{color:var(--ok);font-weight:600}
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Rate these opportunities</h1>
-  <div class="sub">Pick an account, then rate each opportunity <b>1 (poor) to 10 (excellent)</b> and leave a short comment on what is strong or weak. Each list mixes opportunities from different prompt versions in random order &mdash; you are intentionally <b>not</b> told which is which. Tap <b>Save</b> on each, then <b>Submit</b> when you finish an account.</div>
+  <div class="sub">Pick an account, then rate each opportunity <b>1 (poor) to 10 (excellent)</b> and leave a short comment on what is strong or weak. Each list mixes opportunities from different prompt versions in random order &mdash; you are intentionally <b>not</b> told which is which.</div>
 
   <div class="who">
-    <label for="rater">Your name (so we can attribute your ratings)</label>
-    <input id="rater" placeholder="e.g. Aishat" autocomplete="name" />
+    <div>
+      <label for="rater">Your name (so we can attribute your ratings)</label>
+      <input id="rater" placeholder="e.g. Aishat" autocomplete="name" aria-describedby="help" />
+    </div>
+    <button class="freshBtn" id="freshBtn" type="button" onclick="askFresh()" title="Clear this browser and start a new rater">New rater / reset</button>
   </div>
+  <div class="help" id="help"><b>Save</b> records each rating in the database immediately (re-saving overwrites it). <b>Submit</b> just marks you done with an account. Your entries are kept in this browser, so switching accounts or reloading never loses them.</div>
 
-  <div class="toggle" id="toggle"></div>
-  <div class="prog" id="prog"><span id="progText">Loading…</span><span class="bar"><i id="progBar"></i></span></div>
+  <div class="banner warn" id="banner" role="alert" aria-live="polite"></div>
+
+  <div class="toggle" id="toggle" role="tablist" aria-label="Account"></div>
+  <div class="prog" id="prog"><span id="progText">Loading&hellip;</span><span class="bar"><i id="progBar"></i></span></div>
   <div id="list"></div>
   <button class="submit" id="submitBtn" onclick="submitSet()">Submit my ratings for this account</button>
   <div class="note" id="note"></div>
@@ -72,15 +89,21 @@
 <script>
 let CFG = null, ITEMS = [], ACCOUNTS = [];
 let active = null;
-const state = {};                 // key -> {rating, comment}
-const done = JSON.parse(localStorage.oppDone2026 || '{}');   // key -> true (saved)
-const submitted = JSON.parse(localStorage.oppSubmitted2026 || '{}'); // account -> ts
-let SESSION = localStorage.oppSession2026;
-if(!SESSION){ SESSION = Date.now().toString(36)+Math.random().toString(36).slice(2,8); localStorage.oppSession2026 = SESSION; }
+
+// ---- Single per-browser working bucket (survives toggle + reload) ---------
+function newSession(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,8); }
+function loadStore(){
+  try{ const s = JSON.parse(localStorage.oppStore_v3 || 'null'); if(s && s.session) return s; }catch(e){}
+  return { session:newSession(), name:'', cards:{}, submitted:{} };
+}
+let STORE = loadStore();
+function persist(){ localStorage.oppStore_v3 = JSON.stringify(STORE); }
 
 const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const key=it=>it.account+'::'+it.blind_id;
+const cardOf=k=>{ if(!STORE.cards[k]) STORE.cards[k]={rating:null,comment:'',saved:false}; return STORE.cards[k]; };
+const validRating=v=>Number.isInteger(Number(v)) && Number(v)>=1 && Number(v)<=10;
 
 async function boot(){
   try{
@@ -90,84 +113,129 @@ async function boot(){
     ]);
     CFG=cfg; ITEMS=items; ACCOUNTS=cfg.accounts;
     active = localStorage.oppActive2026 || ACCOUNTS[0].key;
-    $('rater').value = localStorage.oppRater2026 || '';
-    $('rater').addEventListener('input', e=>localStorage.oppRater2026=e.target.value);
+    $('rater').value = STORE.name || '';
+    $('rater').addEventListener('input', e=>{ STORE.name = e.target.value; persist(); });
     render();
-  }catch(e){ $('progText').innerHTML='<span class="err">Failed to load opportunities: '+esc(e.message)+'</span>'; }
+  }catch(e){ $('progText').innerHTML='<span class="msg err">Failed to load opportunities: '+esc(e.message)+'</span>'; }
 }
 
-function setActive(k){ active=k; localStorage.oppActive2026=k; render(); window.scrollTo({top:0}); }
-function pick(k,v){ state[k]=state[k]||{}; state[k].rating=v; const el=$('rate-'+k); if(el) [...el.children].forEach((b,i)=>b.classList.toggle('sel',i+1===v)); }
+function setActive(k){ active=k; localStorage.oppActive2026=k; hideBanner(); render(); window.scrollTo({top:0}); }
+
+function pick(k,v){
+  const c=cardOf(k); c.rating=v; c.saved=false; persist();
+  const el=$('rate-'+k);
+  if(el)[...el.children].forEach((b,i)=>{ const on=(i+1===v); b.classList.toggle('sel',on); b.setAttribute('aria-checked',on?'true':'false'); });
+  const card=$('rate-'+k)&&$('rate-'+k).closest('.card'); if(card) card.classList.remove('done');
+  const m=$('m-'+k); if(m){ m.className='msg warn'; m.textContent='not saved yet'; }
+}
+function onComment(k,val){ const c=cardOf(k); c.comment=val; if(c.saved){ c.saved=false; const m=$('m-'+k); if(m){m.className='msg warn';m.textContent='edited — Save to record';} } persist(); }
+
+function showBanner(html, actions){
+  const b=$('banner'); b.classList.add('show');
+  b.innerHTML='<div>'+html+'</div>'+(actions?'<div class="row">'+actions+'</div>':'');
+}
+function hideBanner(){ $('banner').classList.remove('show'); $('banner').innerHTML=''; }
 
 function render(){
-  $('toggle').innerHTML = ACCOUNTS.map(a=>'<button class="'+(active===a.key?'on':'')+'" onclick="setActive(\''+a.key+'\')">'+esc(a.name)+'</button>').join('');
+  $('toggle').innerHTML = ACCOUNTS.map(a=>'<button role="tab" aria-selected="'+(active===a.key)+'" class="'+(active===a.key?'on':'')+'" onclick="setActive(\''+a.key+'\')">'+esc(a.name)+'</button>').join('');
   const mine = ITEMS.filter(it=>it.account===active);
   const list=$('list'); list.innerHTML=''; let n=0;
   for(const it of mine){
-    const k=key(it); const isDone=!!done[k]; if(isDone)n++;
-    const st=state[k]||{};
+    const k=key(it); const c=cardOf(k); const isDone=!!c.saved; if(isDone)n++;
     const acts=it.actions.map(a=>'<li>'+esc(a.title)+(a.tasks&&a.tasks.length?'<ul class="tasks">'+a.tasks.map(t=>'<li>'+esc(t)+'</li>').join('')+'</ul>':'')+'</li>').join('');
-    const btns=Array.from({length:10},(_,i)=>i+1).map(v=>'<button class="'+(st.rating===v?'sel':'')+'" onclick="pick(\''+k+'\','+v+')">'+v+'</button>').join('');
+    const btns=Array.from({length:10},(_,i)=>i+1).map(v=>'<button role="radio" aria-label="Rate '+v+' out of 10" aria-checked="'+(c.rating===v)+'" class="'+(c.rating===v?'sel':'')+'" onclick="pick(\''+k+'\','+v+')">'+v+'</button>').join('');
     const div=document.createElement('div');
     div.className='card'+(isDone?' done':'');
+    const msgCls = isDone?'msg ok':(c.rating?'msg warn':'msg');
+    const msgTxt = isDone?'saved &check;':(c.rating?'not saved yet':'');
     div.innerHTML=
       '<div class="oid"><b>'+esc(it.blind_id)+'</b> <span class="cat">'+esc(it.category)+'</span></div>'+
       '<div class="t">'+esc(it.title)+'</div>'+
       '<div class="desc">'+esc(it.description)+'</div>'+
-      (acts?'<div class="lbl">Suggested actions</div><ul class="acts">'+acts+'</ul>':'')+
-      '<div class="lbl">Your rating (1&ndash;10)</div>'+
-      '<div class="rate" id="rate-'+k+'">'+btns+'</div>'+
+      (acts?'<span class="lbl">Suggested actions</span><ul class="acts">'+acts+'</ul>':'')+
+      '<span class="lbl" id="rl-'+k+'">Your rating (1&ndash;10)</span>'+
+      '<div class="rate" id="rate-'+k+'" role="radiogroup" aria-labelledby="rl-'+k+'">'+btns+'</div>'+
       '<div class="rk"><span>1 &middot; poor</span><span>10 &middot; excellent</span></div>'+
-      '<textarea id="c-'+k+'" placeholder="What is good or weak about this opportunity?">'+esc(st.comment||'')+'</textarea>'+
-      '<div><button class="save'+(isDone?' sec':'')+'" onclick="save(\''+it.account+'\',\''+it.blind_id+'\')">'+(isDone?'Update':'Save')+'</button><span class="ok" id="ok-'+k+'">'+(isDone?'saved ✓':'')+'</span></div>';
+      '<label class="lbl" for="c-'+k+'">Comment</label>'+
+      '<textarea id="c-'+k+'" oninput="onComment(\''+k+'\',this.value)" placeholder="What is good or weak about this opportunity?">'+esc(c.comment||'')+'</textarea>'+
+      '<div><button class="save'+(isDone?' sec':'')+'" onclick="save(\''+it.account+'\',\''+it.blind_id+'\')">'+(isDone?'Update':'Save')+'</button><span class="'+msgCls+'" id="m-'+k+'">'+msgTxt+'</span></div>';
     list.appendChild(div);
   }
   const nm=ACCOUNTS.find(a=>a.key===active).name;
-  $('progText').textContent = nm+': '+n+' / '+mine.length+' rated'+(submitted[active]?'  ·  submitted ✓':'');
+  $('progText').textContent = nm+': '+n+' / '+mine.length+' rated'+(STORE.submitted[active]?'  ·  submitted ✓':'');
   $('progBar').style.width = (mine.length? (n/mine.length*100):0)+'%';
-  const btn=$('submitBtn'); btn.textContent = submitted[active]? 'Re-submit '+nm+' ratings' : 'Submit my ratings for '+nm;
-  $('note').textContent='';
+  $('submitBtn').textContent = STORE.submitted[active]? 'Re-submit '+nm+' ratings' : 'Submit my ratings for '+nm;
+  $('note').className='note'; $('note').textContent='';
 }
 
 async function postRating(payload){
   const res = await fetch('https://ntfy.sh/'+CFG.ntfyTopic, {
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
+    method:'POST', headers:{'Content-Type':'application/json'},
     body: JSON.stringify(payload),
   });
   if(!res.ok) throw new Error('HTTP '+res.status);
 }
 
-async function save(account, blind_id){
-  const k=account+'::'+blind_id;
-  const rater=$('rater').value.trim();
-  if(!rater){ alert('Please enter your name at the top first.'); $('rater').focus(); return; }
-  const rating=(state[k]||{}).rating;
-  const comment=$('c-'+k).value.trim();
-  if(!rating){ alert('Pick a 1–10 rating first.'); return; }
-  state[k]=state[k]||{}; state[k].comment=comment;
-  $('ok-'+k).textContent='saving…';
-  try{
-    await postRating({kind:'save', account, blind_id, rating, comment, rater, session:SESSION, ts:new Date().toISOString()});
-    done[k]=true; localStorage.oppDone2026=JSON.stringify(done);
-    render();
-  }catch(e){ $('ok-'+k).innerHTML='<span class="err">save failed &mdash; retry</span>'; }
+// Core save (POST + mark). Returns true on success. Does NOT re-render.
+async function doSave(account, blind_id){
+  const k=account+'::'+blind_id; const c=cardOf(k);
+  if(!validRating(c.rating)) return false;
+  await postRating({kind:'save', account, blind_id, rating:Number(c.rating), comment:(c.comment||'').trim(),
+    rater:STORE.name.trim(), session:STORE.session, ts:new Date().toISOString()});
+  c.saved=true; persist();
+  return true;
 }
 
-async function submitSet(){
-  const rater=$('rater').value.trim();
-  if(!rater){ alert('Please enter your name at the top first.'); $('rater').focus(); return; }
+async function save(account, blind_id){
+  const k=account+'::'+blind_id; const c=cardOf(k);
+  const m=$('m-'+k);
+  if(!STORE.name.trim()){ if(m){m.className='msg err';m.textContent='enter your name at the top first';} $('rater').focus(); return; }
+  if(!validRating(c.rating)){ if(m){m.className='msg err';m.textContent='pick a 1–10 rating first';} return; }
+  if(m){ m.className='msg'; m.textContent='saving…'; }
+  try{ await doSave(account, blind_id); render(); }
+  catch(e){ if(m){ m.className='msg err'; m.textContent='save failed — tap Save to retry'; } }
+}
+
+function askFresh(){
+  showBanner('Start a fresh set for a new rater? Your current entries stay recorded in the database; this just clears this browser so a different person can rate cleanly.',
+    '<button class="primary" onclick="doFresh()">Start fresh</button><button onclick="hideBanner()">Cancel</button>');
+}
+function doFresh(){ STORE={ session:newSession(), name:'', cards:{}, submitted:{} }; persist(); $('rater').value=''; hideBanner(); render(); $('rater').focus(); }
+
+async function flushAndSubmit(){
+  hideBanner();
   const mine = ITEMS.filter(it=>it.account===active);
-  const rated = mine.filter(it=>done[key(it)]).length;
-  if(rated < mine.length && !confirm('You have rated '+rated+' of '+mine.length+' opportunities for this account. Submit anyway?')) return;
   const btn=$('submitBtn'); btn.disabled=true; btn.textContent='Submitting…';
+  let failed=0, flushed=0;
+  for(const it of mine){
+    const c=cardOf(key(it));
+    if(validRating(c.rating) && !c.saved){
+      try{ await doSave(it.account, it.blind_id); flushed++; }catch(e){ failed++; }
+    }
+  }
+  const rated = mine.filter(it=>cardOf(key(it)).saved).length;
   try{
-    await postRating({kind:'submit', account:active, rater, session:SESSION, rated, total:mine.length, ts:new Date().toISOString()});
-    submitted[active]=Date.now(); localStorage.oppSubmitted2026=JSON.stringify(submitted);
+    await postRating({kind:'submit', account:active, rater:STORE.name.trim(), session:STORE.session, rated, total:mine.length, ts:new Date().toISOString()});
+    STORE.submitted[active]=Date.now(); persist();
     render();
-    $('note').innerHTML='✓ Thanks! Your '+esc(ACCOUNTS.find(a=>a.key===active).name)+' ratings are recorded. You can switch accounts above.';
-  }catch(e){ $('note').innerHTML='<span class="err">Submit failed &mdash; please try again.</span>'; }
-  finally{ btn.disabled=false; }
+    const nm=ACCOUNTS.find(a=>a.key===active).name;
+    $('note').className='note ok';
+    $('note').textContent='✓ Thanks! Your '+nm+' ratings are recorded'+(flushed?' ('+flushed+' auto-saved on submit)':'')+'. You can switch accounts above.'+(failed?'  ⚠ '+failed+' failed to save — please retry those cards.':'');
+  }catch(e){ $('note').className='note'; $('note').innerHTML='<span class="msg err">Submit failed — please try again.</span>'; }
+  finally{ btn.disabled=false; render(); }
+}
+
+function submitSet(){
+  if(!STORE.name.trim()){ showBanner('Please enter your name at the top before submitting.'); $('rater').focus(); return; }
+  const mine = ITEMS.filter(it=>it.account===active);
+  const willFlush = mine.filter(it=>{ const c=cardOf(key(it)); return validRating(c.rating) && !c.saved; }).length;
+  const rated = mine.filter(it=>{ const c=cardOf(key(it)); return c.saved || validRating(c.rating); }).length;
+  if(rated < mine.length){
+    showBanner('You have rated '+rated+' of '+mine.length+' opportunities for this account'+(willFlush?' ('+willFlush+' will be saved now)':'')+'. Submit anyway?',
+      '<button class="primary" onclick="flushAndSubmit()">Submit anyway</button><button onclick="hideBanner()">Keep rating</button>');
+    return;
+  }
+  flushAndSubmit();
 }
 
 boot();

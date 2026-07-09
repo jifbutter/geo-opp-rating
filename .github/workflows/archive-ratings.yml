@@ -6,7 +6,16 @@ name: Archive ratings
 on:
   schedule:
     - cron: '*/30 * * * *'   # every 30 min (ntfy retains ~12h, so no loss)
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'ntfy topic to poll (blank = topic from config.json)'
+        required: false
+        default: ''
+      outfile:
+        description: 'Output file to append to'
+        required: false
+        default: 'ratings-raw.jsonl'
 
 permissions:
   contents: write
@@ -21,31 +30,39 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Poll ntfy and append new messages
+        env:
+          IN_TOPIC: ${{ github.event.inputs.topic }}
+          OUTFILE: ${{ github.event.inputs.outfile || 'ratings-raw.jsonl' }}
         run: |
           set -euo pipefail
-          TOPIC=$(node -e "console.log(require('./config.json').ntfyTopic)")
+          TOPIC="${IN_TOPIC:-}"
+          if [ -z "$TOPIC" ]; then TOPIC=$(node -e "console.log(require('./config.json').ntfyTopic)"); fi
+          echo "Polling topic=$TOPIC -> $OUTFILE"
           curl -s "https://ntfy.sh/$TOPIC/json?poll=1&since=all" > /tmp/poll.ndjson || true
-          touch ratings-raw.jsonl
+          touch "$OUTFILE"
           node -e '
             const fs=require("fs");
-            const seen=new Set(fs.readFileSync("ratings-raw.jsonl","utf8").split("\n").filter(Boolean).map(l=>{try{return JSON.parse(l)._id}catch{return null}}));
+            const out=process.env.OUTFILE;
+            const seen=new Set(fs.readFileSync(out,"utf8").split("\n").filter(Boolean).map(l=>{try{return JSON.parse(l)._id}catch{return null}}));
             const lines=fs.readFileSync("/tmp/poll.ndjson","utf8").split("\n").filter(Boolean);
             let added=0;
-            const out=fs.createWriteStream("ratings-raw.jsonl",{flags:"a"});
+            const ws=fs.createWriteStream(out,{flags:"a"});
             for(const l of lines){ let m; try{m=JSON.parse(l)}catch{continue}
               if(m.event!=="message"||seen.has(m.id))continue;
               let body; try{body=JSON.parse(m.message)}catch{body={raw:m.message}}
-              out.write(JSON.stringify({_id:m.id,_time:m.time,...body})+"\n"); seen.add(m.id); added++; }
-            out.end(); console.log("added",added,"rows");
+              ws.write(JSON.stringify({_id:m.id,_time:m.time,...body})+"\n"); seen.add(m.id); added++; }
+            ws.end(); console.log("added",added,"rows to",out);
           '
       - name: Commit if changed
+        env:
+          OUTFILE: ${{ github.event.inputs.outfile || 'ratings-raw.jsonl' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet ratings-raw.jsonl; then
-            git add ratings-raw.jsonl
-            git commit -m "archive: ratings snapshot $(date -u +%FT%TZ)"
-            git push
-          else
+          git add "$OUTFILE"
+          if git diff --cached --quiet; then
             echo "no new ratings"
+          else
+            git commit -m "archive: ratings snapshot $(date -u +%FT%TZ) [$OUTFILE]"
+            git push
           fi
